@@ -1,6 +1,6 @@
 # Loop 2 — Plan sites + create repos
 
-> For each approved lead: unique website plan, design system, page plans, and a GitHub repo under **Alkharazmi**.  
+> For each approved lead: unique website plan, design system, page plans, and a GitHub repo under your **ORG**.  
 > Tag repos `pending-beta` + `geo:<GEO_SLUG>`.  
 > **Stop after the first full plan** for Gate B before planning the rest of the batch.  
 > Geography comes from the campaign / Excel — not hardcoded.
@@ -106,7 +106,7 @@ Self-review checklist, each item 0–10:
 Second pass: improve weakest 3 scores; target ≥95. Do not invent a fake "120" scale.
 
 ## Per-business repo
-- Org: Alkharazmi
+- Org: <ORG> (from Campaign variables)
 - Name: <GEO_SLUG>-<category-slug>-<business-slug>
 - Topics/tags: web-lead, pending-beta, batch-1, geo:<GEO_SLUG>
 - Branches: dev (default), prod
@@ -141,7 +141,7 @@ Use gstack design skills and custom global skills already installed.
 
 ## Done when (per business)
 - Checklist ≥90
-- Repo exists under Alkharazmi with tags pending-beta + batch-1 + geo:<GEO_SLUG>
+- Repo exists under <ORG> with tags pending-beta + batch-1 + geo:<GEO_SLUG>
 - All required files present on dev
 - Sample first repo paused for human Gate B
 ```
@@ -154,7 +154,7 @@ Use gstack design skills and custom global skills already installed.
 - [ ] Unique design lane vs other batch sites  
 - [ ] Local geo + language reflected  
 - [ ] All required files present  
-- [ ] Repo under `Alkharazmi` named with `GEO_SLUG`  
+- [ ] Repo under `<ORG>` named with `GEO_SLUG`  
 - [ ] Tags include `geo:<GEO_SLUG>`  
 - [ ] First of batch stopped for **Gate B**  
 

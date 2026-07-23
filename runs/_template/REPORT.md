@@ -31,7 +31,7 @@ GEO_SLUG:
 LOCALE:
 VERTICALS:
 BATCH_SIZE:
-ORG: Alkharazmi
+ORG: <ORG>
 ```
 
 ---
@@ -65,7 +65,7 @@ ORG: Alkharazmi
 
 | Business | Repo | Score /100 | Design lane | Tags | Notes |
 |----------|------|------------|-------------|------|-------|
-| | Alkharazmi/... | | | pending-beta → … | |
+| | <ORG>/... | | | pending-beta → … | |
 
 ---
 

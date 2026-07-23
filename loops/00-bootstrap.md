@@ -224,9 +224,9 @@ Template: this repo's mcp.example.json
 After config: restart Claude Code and list MCP tools. Failures = report, not silent skip for shadcn/magic/pollinations/webclaw.
 
 ## Phase D — GitHub org readiness
-- gh auth status (use Taha-Mahmoodi / account with org access)
-- Confirm access to org: Alkharazmi
-- gh repo list Alkharazmi --limit 5
+- gh auth status (use account with org access)
+- Confirm access to org: <ORG> (set in Campaign variables)
+- gh repo list <ORG> --limit 5
 
 ## Phase E — Verification report
 Write: ./pipeline-runs/BOOTSTRAP_REPORT.md
@@ -258,7 +258,7 @@ Checklist (pass/fail each):
 [ ] optional Unsplash + Pexels free keys for stock
 [ ] FREE_IMAGE_TOOLS.md present
 [ ] higgsfield optional paid status
-[ ] GitHub org access (Alkharazmi)
+[ ] GitHub org access (<ORG> from Campaign variables)
 [ ] Confirmed: pipeline geography is campaign-variable (not hardcoded)
 [ ] TOOLS.md catalog present in pipeline repo
 
@@ -284,7 +284,7 @@ Checklist (pass/fail each):
 | UditAkhourii/adhd | branerail, brane-code |
 | ai-marketing-claude | digital-marketing-pro (SKIP ok if install blocked) |
 | browser-use (or SKIP + reason) | |
-| `Alkharazmi` org access | |
+| `<ORG>` org access (set in Campaign variables) | |
 | `BOOTSTRAP_REPORT.md` referencing TOOLS.md | |
 
 ---

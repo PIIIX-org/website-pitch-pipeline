@@ -8,7 +8,7 @@ The pipeline is **not done** until:
 
 1. The report folder exists under `runs/`
 2. It is committed and **pushed** to  
-   **`Alkharazmi/website-pitch-pipeline`** (this repo)
+   **`<ORG>/website-pitch-pipeline`** (this repo)
 3. The PR is opened **or** the commit is on `main` / `dev` per team practice
 
 Agents must not claim “pipeline complete” without a live GitHub URL to the report.
@@ -37,7 +37,7 @@ runs/2026-08-01/berlin-auto-repair-q3/
 
 - **Primary:** agent finishing Loop 3 (or dedicated Loop 4 paste)
 - **Trigger:** batch build complete (or human says “close the run”)
-- **Auth:** `gh` as an account with push access to `Alkharazmi/website-pitch-pipeline` (e.g. Taha-Mahmoodi)
+- **Auth:** `gh` as an account with push access to `<ORG>/website-pitch-pipeline`
 
 ## Template
 

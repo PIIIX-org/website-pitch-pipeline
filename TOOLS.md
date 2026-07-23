@@ -229,7 +229,7 @@ Marketplace reference: `indranilbanerjee/neels-plugins`.
 
 ```bash
 git clone https://github.com/kepano/kepano-obsidian.git ~/Obsidian/kepano-template
-# Open as vault in Obsidian; copy structure for "Alkharazmi campaigns"
+# Open as vault in Obsidian; copy structure for campaign notes
 # Suggested folders: Campaigns/<GEO_SLUG>/, Leads/, Plans/, Outreach/
 ```
 

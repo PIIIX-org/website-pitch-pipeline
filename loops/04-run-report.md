@@ -1,7 +1,7 @@
 # Loop 4 — Upload full run report (mandatory)
 
 > When the pipeline run is finished (or the human closes the batch), write a **full report** and **push it to this repo**:  
-> **`Alkharazmi/website-pitch-pipeline`** under `runs/`.  
+> **`<ORG>/website-pitch-pipeline`** under `runs/`.  
 > **The pipeline is not done until the report is on GitHub.**
 
 ---
@@ -11,7 +11,7 @@
 ```text
 DONE = (batch work finished OR human said "close the run")
       AND report folder exists under runs/
-      AND commit pushed to Alkharazmi/website-pitch-pipeline
+      AND commit pushed to <ORG>/website-pitch-pipeline
       AND report URL shown to the human
 
 If the report is not on GitHub → status remains INCOMPLETE.
@@ -39,18 +39,18 @@ RUN_DATE:          # YYYY-MM-DD (UTC preferred)
 ```text
 /loop [auto]
 /goal
-# Loop 4 — Full run report → push to Alkharazmi/website-pitch-pipeline
+# Loop 4 — Full run report → push to <ORG>/website-pitch-pipeline
 
 ## Hard completion condition
 The pipeline run is NOT complete until a full report is committed and pushed to:
-  https://github.com/Alkharazmi/website-pitch-pipeline
+  https://github.com/<ORG>/website-pitch-pipeline
 under:
   runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
 Show the human the GitHub URL to REPORT.md when finished.
 
 ## Prerequisite
 - Loops 1–3 for this campaign finished, stopped at a gate, or human said "close the run" / "write the report"
-- gh authenticated as an account with write access to Alkharazmi/website-pitch-pipeline (prefer Taha-Mahmoodi)
+- gh authenticated as an account with write access to <ORG>/website-pitch-pipeline
 - Campaign variables known (GEO_SLUG, CAMPAIGN_NAME, dates)
 
 ## Objective
@@ -59,7 +59,7 @@ Produce a complete, honest run report (successes, failures, skips, links) and up
 ## Steps
 
 ### 1. Clone or update pipeline repo
-  WORKDIR: a clean clone or existing local clone of Alkharazmi/website-pitch-pipeline
+  WORKDIR: a clean clone or existing local clone of <ORG>/website-pitch-pipeline
   git fetch && git checkout main   # or dev if that is the integration branch
   git pull
 
@@ -109,7 +109,7 @@ Produce a complete, honest run report (successes, failures, skips, links) and up
   - preferred: get report onto default branch
 
 ### 6. Verify
-  gh api repos/Alkharazmi/website-pitch-pipeline/contents/runs/<path>/REPORT.md
+  gh api repos/<ORG>/website-pitch-pipeline/contents/runs/<path>/REPORT.md
   OR open the blob URL in browser
   Print for the human:
   - Report URL
@@ -118,7 +118,7 @@ Produce a complete, honest run report (successes, failures, skips, links) and up
 
 ## Done when
 - [ ] REPORT.md + SUMMARY.md exist under runs/...
-- [ ] Pushed to Alkharazmi/website-pitch-pipeline (remote)
+- [ ] Pushed to <ORG>/website-pitch-pipeline (remote)
 - [ ] Human given clickable GitHub URL to REPORT.md
 - [ ] Only then may you say the pipeline run is closed
 
@@ -136,7 +136,7 @@ If push fails (auth, network, permissions):
 
 - [ ] Path follows `runs/<date>/<geo-campaign>/`  
 - [ ] REPORT.md + SUMMARY.md filled (not empty template)  
-- [ ] Pushed to **Alkharazmi/website-pitch-pipeline**  
+- [ ] Pushed to **<ORG>/website-pitch-pipeline**  
 - [ ] No secrets in the commit  
 - [ ] Human has the report URL  
 

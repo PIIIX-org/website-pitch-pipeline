@@ -18,7 +18,7 @@ GEO_SLUG:          [short slug for files/repos, e.g. istanbul, berlin, nyc, us-p
 LOCALE / LANGUAGE: [e.g. en, tr, de — site copy + outreach language]
 VERTICALS:         [1–2 niches, e.g. tailors, auto repair]
 BATCH_SIZE:        [default 5 plans/builds; research count often 15]
-ORG:               Alkharazmi
+ORG:               [your GitHub org or username]
 ```
 
 ### Geography rules
@@ -47,7 +47,7 @@ ORG:               Alkharazmi
 
 ```text
 The pipeline run is NOT DONE until a full report is uploaded to:
-  Alkharazmi/website-pitch-pipeline
+  <ORG>/website-pitch-pipeline
   path: runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
 ```
 
@@ -61,7 +61,7 @@ The pipeline run is NOT DONE until a full report is uploaded to:
 
 ```text
 PROJECT: Local Business Website Pitch Pipeline
-ORG:     Alkharazmi
+ORG:     set per campaign (see Campaign variables)
 BATCH:   5 businesses max unless a human expands scope
 GEO:     set per campaign (see Campaign variables)
 ```
@@ -88,7 +88,7 @@ GEO:     set per campaign (see Campaign variables)
 - Never claim “done” without checklist evidence.
 - Prefer fewer excellent leads over many weak ones.
 - “Do not stop until done” always means **done = written acceptance criteria**, not infinite polish.
-- **Run complete** additionally requires Loop 4: report pushed to `Alkharazmi/website-pitch-pipeline` under `runs/`.
+- **Run complete** additionally requires Loop 4: report pushed to `<ORG>/website-pitch-pipeline` under `runs/`.
 
 ### Stack defaults (pitch / demo sites)
 
@@ -232,10 +232,10 @@ Paths use campaign slugs — replace placeholders.
 ./leads/<GEO_SLUG>-business-leads-batch-1.xlsx
 ./leads/<GEO_SLUG>-business-leads-batch-1.csv
 ./leads/<GEO_SLUG>-summary.md
-Alkharazmi/<GEO_SLUG>-<category>-<business>/    # Loops 2–3 (one repo per business)
+<ORG>/<GEO_SLUG>-<category>-<business>/    # Loops 2–3 (one repo per business)
 
 # After run (Loop 4) — MUST be on GitHub in this repo:
-Alkharazmi/website-pitch-pipeline/runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
+<ORG>/website-pitch-pipeline/runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
   REPORT.md
   SUMMARY.md
   checklist.md            # recommended

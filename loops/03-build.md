@@ -1,6 +1,6 @@
 # Loop 3 — Build + outreach email
 
-> Find `Alkharazmi` repos tagged `pending-beta` (optionally filter `geo:<GEO_SLUG>`), implement their plans, open PRs for human review, draft a human-sounding outreach email in the campaign language.  
+> Find `<ORG>` repos tagged `pending-beta` (optionally filter `geo:<GEO_SLUG>`), implement their plans, open PRs for human review, draft a human-sounding outreach email in the campaign language.  
 > **Build one site fully → Gate C** before the rest of the batch.  
 > Geography is whatever the plan/campaign specifies.
 
@@ -23,7 +23,7 @@ LOCALE / LANGUAGE:
 # Loop 3 — Implement pending-beta plans + outreach email (any geography)
 
 ## Prerequisite
-Only implement repos in Alkharazmi with topic/tag: pending-beta
+Only implement repos in <ORG> with topic/tag: pending-beta
 If GEO_SLUG is set, also require tag geo:<GEO_SLUG>
 Skip any repo not approved at Gate B.
 Build max 1 full site, then pause for human Gate C before continuing.
@@ -135,7 +135,7 @@ Must include:
 When the batch is finished (or the human closes the run), **you must** run  
 [`04-run-report.md`](./04-run-report.md): write `REPORT.md` + `SUMMARY.md` and **push** them to:
 
-`Alkharazmi/website-pitch-pipeline` → `runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign>/`
+`<ORG>/website-pitch-pipeline` → `runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign>/`
 
 **The pipeline is not done until that report is on GitHub.**
 

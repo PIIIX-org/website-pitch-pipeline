@@ -4,12 +4,12 @@
 
 **Find local businesses with weak websites → plan unique demos → build → outreach.**
 
-An agent-ready operating system for **Alkharazmi** sales demos — **any city, region, or country.**  
+An agent-ready operating system for local business sales demos — **any city, region, or country, any org.**  
 Geography is a campaign variable. Aesthetics first. Human gates. No generic templates.
 
 <br />
 
-[![Org](https://img.shields.io/badge/org-Alkharazmi-0B0B0F?style=for-the-badge&labelColor=111827)](https://github.com/Alkharazmi)
+[![Org](https://img.shields.io/badge/org-your__org-0B0B0F?style=for-the-badge&labelColor=111827)](#campaign-variables)
 [![Geo](https://img.shields.io/badge/geography-any_market-A78BFA?style=for-the-badge&labelColor=111827)](#campaign-variables)
 [![Loops](https://img.shields.io/badge/loops-0→1→2→3-F59E0B?style=for-the-badge&labelColor=111827)](#the-four-loops)
 [![Stack](https://img.shields.io/badge/demos-Next.js_+_shadcn-38BDF8?style=for-the-badge&labelColor=111827)](#stack-defaults)
@@ -50,6 +50,7 @@ The first site is not the product. **The conversation is.**
 
 | Variable | Example |
 |----------|---------|
+| `ORG` | your GitHub org or username (e.g. `PIIIX-org`, `my-company`) |
 | `GEOGRAPHY` | Istanbul · Berlin · NYC · Lisbon metro · US Southwest HVAC |
 | `GEO_SLUG` | `istanbul` · `berlin` · `nyc` · `lisbon` · `us-sw-hvac` |
 | `LOCALE` | `tr` · `de` · `en` · … |
@@ -87,7 +88,7 @@ MCP template: **[`mcp.example.json`](./mcp.example.json)**
 ### 1. Clone this repo
 
 ```bash
-gh repo clone Alkharazmi/website-pitch-pipeline
+gh repo clone <ORG>/website-pitch-pipeline
 cd nyc-website-pitch-pipeline
 ```
 
@@ -164,7 +165,7 @@ See [`loops/04-run-report.md`](./loops/04-run-report.md) and [`runs/README.md`](
 
 - Different design **lane** per business  
 - Score **≥ 90 / 100** on the written rubric  
-- Repos under **`Alkharazmi`**: `<GEO_SLUG>-<category>-<business>`  
+- Repos under your **`ORG`**: `<GEO_SLUG>-<category>-<business>`  
 - Tags: `pending-beta`, `web-lead`, `geo:<GEO_SLUG>`, `batch-1`  
 
 ### Builds (Loop 3)
@@ -230,9 +231,9 @@ website-pitch-pipeline/
 Per-business demo repos (Loop 2):
 
 ```text
-Alkharazmi/istanbul-tailor-example-shop
-Alkharazmi/berlin-auto-example-garage
-Alkharazmi/nyc-plumber-example-flow     # only when campaign geo is NYC
+<ORG>/istanbul-tailor-example-shop
+<ORG>/berlin-auto-example-garage
+<ORG>/nyc-plumber-example-flow     # only when campaign geo is NYC
 ```
 
 Lead files:
@@ -271,7 +272,7 @@ Keep batches small (**≤ 5** plans/builds at a time unless expanded on purpose)
 
 ## Maintainers
 
-- **Org:** [Alkharazmi](https://github.com/Alkharazmi)  
+- **Org:** Set via `ORG` campaign variable
 - **Operator account:** Taha Mahmoodi (`Taha-Mahmoodi`)
 
 ---
