@@ -2,6 +2,8 @@
 
 A step-by-step guide to fork, set up, and run the Local Business Website Pitch Pipeline.
 
+**Universal AI Support:** This pipeline works with any major AI model — Claude (Anthropic), GPT (OpenAI), Gemini (Google), Mistral, and more. Before you start, run the Cost Estimator (Loop 0a) to detect your current model, estimate costs, and get recommendations.
+
 ---
 
 ## 1. Fork this repo
@@ -29,6 +31,8 @@ Before running the pipeline, make sure you have:
 | **Python 3.12+** | `python3 --version` | https://python.org |
 | **Claude Code** | `claude --version` | https://claude.ai/code |
 
+**Note:** Before running any loops, you'll run the Cost Estimator (Loop 0a) which uses Node.js to calculate costs and suggest models. This requires Node.js 18+ but no additional npm packages.
+
 ---
 
 ## 3. Set Campaign Variables
@@ -50,6 +54,23 @@ BATCH_SIZE:        5 (default)
 ## 4. Run Loops in Order
 
 Open **Claude Code** and run each loop sequentially:
+
+### Loop 0a — Cost Estimate & Model Selection (first time, before anything)
+
+Estimate AI costs and select the best model for your campaign budget and quality needs.
+
+```text
+/loop [auto]
+# paste the contents of loops/00a-cost-estimate.md
+```
+
+This loop will:
+- Detect which AI model you're currently using
+- Calculate estimated costs for your campaign size
+- Recommend models for **Best Quality**, **Balanced**, or **Budget** strategies
+- Generate a `campaign-model-choice.txt` memo
+
+**Stop here** and decide on a model before proceeding.
 
 ### Loop 0 — Bootstrap (first time only)
 
@@ -174,7 +195,10 @@ Pollinations MCP is **free and requires no API key**.
 
 | What | Where |
 |------|-------|
+| Cost estimator | `node utils/cost-estimator.js estimate <leads> <businesses> <sites>` |
+| Cost estimator loop | `loops/00a-cost-estimate.md` (run first!) |
 | Campaign variables | Set at start of each loop prompt |
+| Model choice memo | `campaign-model-choice.txt` (created by Loop 0a) |
 | Lead files | `./leads/<GEO_SLUG>-business-leads-batch-1.xlsx` |
 | Demo repos | `<ORG>/<GEO_SLUG>-<category>-<business>/` |
 | Run reports | `runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign>/` |
