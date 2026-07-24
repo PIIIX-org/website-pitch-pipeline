@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 90" role="img" aria-label="Title-block meta strip: license MIT, runtime any agent, geography variable, batch cap 5, gates A B C checked by human, revision blank">
+  <title>META STRIP — title-block cells: LICENSE MIT · RUNTIME ANY AGENT · GEOGRAPHY VARIABLE · BATCH CAP 5 · GATES A·B·C HUMAN · REV blank</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .lbl { font-size: 13px; letter-spacing: 2.5px; fill: #9CC3E0; }
+    .val { font-size: 26px; font-weight: 700; letter-spacing: 2px; fill: #f5f9fb; }
+  </style>
+
+  <rect width="1600" height="90" fill="#272625"/>
+
+  <!-- double drafting border: heavy outer, thin inner -->
+  <rect x="8" y="10" width="1584" height="70" fill="none" stroke="#f5f9fb" stroke-width="2.5"/>
+  <rect x="13" y="15" width="1574" height="60" fill="none" stroke="#f5f9fb" stroke-width="0.75" opacity="0.55"/>
+
+  <!-- ruler ticks along top edge -->
+  <g stroke="#9CC3E0" stroke-width="1" opacity="0.55">
+    <path d="M48 10v4M88 10v4M128 10v4M168 10v4M238 10v4M278 10v4M318 10v4M358 10v4M398 10v4M438 10v4M508 10v4M548 10v4M588 10v4M628 10v4M668 10v4M708 10v4M778 10v4M818 10v4M858 10v4M958 10v4M998 10v4M1038 10v4M1078 10v4M1118 10v4M1158 10v4M1198 10v4M1238 10v4M1278 10v4M1358 10v4M1398 10v4M1438 10v4M1478 10v4M1518 10v4M1558 10v4"/>
+  </g>
+
+  <!-- cell dividers -->
+  <g stroke="#f5f9fb" stroke-width="1.5">
+    <path d="M198 10v70M468 10v70M738 10v70M918 10v70M1318 10v70"/>
+  </g>
+
+  <!-- cell 1: LICENSE -->
+  <text class="lbl" x="22" y="33">LICENSE</text>
+  <text class="val" x="22" y="66">MIT</text>
+
+  <!-- cell 2: RUNTIME -->
+  <text class="lbl" x="212" y="33">RUNTIME</text>
+  <text class="val" x="212" y="66">ANY AGENT</text>
+
+  <!-- cell 3: GEOGRAPHY -->
+  <text class="lbl" x="482" y="33">GEOGRAPHY</text>
+  <text class="val" x="482" y="66">VARIABLE</text>
+
+  <!-- cell 4: BATCH CAP -->
+  <text class="lbl" x="752" y="33">BATCH CAP</text>
+  <text class="val" x="752" y="66">5</text>
+
+  <!-- cell 5: GATES (human moment — red accent) -->
+  <text class="lbl" x="932" y="33">GATES</text>
+  <text class="val" x="932" y="66">A &#183; B &#183; C &#8212;</text>
+  <rect x="1146" y="40" width="118" height="32" fill="#B3402F"/>
+  <text x="1205" y="63" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="2.5" fill="#f5f9fb">HUMAN</text>
+
+  <!-- cell 6: REV (blank field) -->
+  <text class="lbl" x="1332" y="33">REV</text>
+  <path d="M1332 64h130" stroke="#9CC3E0" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="100%" role="img" aria-label="Sheet register: six pipeline loops as a drawing-set index, with three human-signed gates between them.">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      fill: #f5f9fb;
+    }
+    .t-title  { font-size: 22px; font-weight: 700; letter-spacing: 3px; }
+    .t-sub    { font-size: 12px; letter-spacing: 2px; fill: #9CC3E0; }
+    .t-rule   { font-size: 15px; font-weight: 700; letter-spacing: 1.5px; }
+    .t-head   { font-size: 13px; letter-spacing: 2.5px; fill: #9CC3E0; }
+    .t-no     { font-size: 13px; font-weight: 700; letter-spacing: 1px; fill: #272625; }
+    .t-name   { font-size: 17px; font-weight: 700; letter-spacing: 2.5px; }
+    .t-scope  { font-size: 13px; letter-spacing: 1px; fill: #9CC3E0; }
+    .t-out    { font-size: 13px; letter-spacing: 1px; }
+    .t-gate   { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; fill: #B3402F; }
+    .t-note   { font-size: 11.5px; letter-spacing: 2px; fill: #9CC3E0; }
+    .t-foot   { font-size: 12px; letter-spacing: 2px; fill: #9CC3E0; }
+
+    .row   { animation: rowIn .45s ease-out both; }
+    .rule  { stroke-dasharray: 1340; stroke-dashoffset: 0; animation: ruleDraw .6s ease-out both; }
+    .stamp { transform-box: fill-box; transform-origin: center; animation: stampIn .35s cubic-bezier(.2,1.4,.4,1) both; }
+    .fade  { animation: fadeIn .7s ease-out both; }
+
+    @keyframes rowIn    { from { opacity: 0; } }
+    @keyframes ruleDraw { from { stroke-dashoffset: 1340; } }
+    @keyframes stampIn  { from { opacity: 0; transform: scale(1.5); } }
+    @keyframes fadeIn   { from { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim { animation: none !important; }
+    }
+  </style>
+
+  <!-- field -->
+  <rect x="0" y="0" width="1600" height="620" fill="#272625"/>
+
+  <!-- drafting frame -->
+  <rect x="10" y="10" width="1580" height="600" fill="none" stroke="#2E5C8A" stroke-width="1"/>
+  <rect x="20" y="20" width="1560" height="580" fill="none" stroke="#9CC3E0" stroke-width="1.5"/>
+
+  <!-- title block -->
+  <text class="t-title" x="44" y="54">DRAWING SET — SHEET REGISTER</text>
+  <text class="t-sub" x="44" y="78">JOB FILE: PIIIX-ORG / WEBSITE-PITCH-PIPELINE · 6 SHEETS · 3 GATES · ANY GEOGRAPHY</text>
+  <text class="t-rule" x="1556" y="60" text-anchor="end">AGENTS HOLD NO KEYS. THE HUMAN SIGNS EVERY GATE.</text>
+  <line x1="20" y1="92" x2="1580" y2="92" stroke="#9CC3E0" stroke-width="1.5"/>
+
+  <!-- table header -->
+  <g class="anim fade" style="animation-delay:.1s">
+    <rect x="40" y="100" width="1340" height="28" fill="#0E2A3F"/>
+    <text class="t-head" x="56" y="119">NO.</text>
+    <text class="t-head" x="250" y="119">SHEET TITLE</text>
+    <text class="t-head" x="610" y="119">SCOPE OF WORK</text>
+    <text class="t-head" x="1010" y="119">ISSUED OUTPUT</text>
+  </g>
+
+  <!-- table verticals -->
+  <g class="anim fade" style="animation-delay:.25s" stroke="#2E5C8A" stroke-width="1" opacity=".65">
+    <line x1="40"   y1="100" x2="40"   y2="548"/>
+    <line x1="240"  y1="128" x2="240"  y2="548"/>
+    <line x1="600"  y1="128" x2="600"  y2="548"/>
+    <line x1="1000" y1="128" x2="1000" y2="548"/>
+    <line x1="1380" y1="100" x2="1380" y2="548"/>
+  </g>
+
+  <!-- SHEET 00a : 128-184, c=156 -->
+  <g class="anim row" style="animation-delay:.4s">
+    <rect x="52" y="143" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="160" text-anchor="middle">SHEET 00a</text>
+    <text class="t-name" x="250" y="162">THE TAKEOFF</text>
+    <text class="t-scope" x="610" y="161">PRICE THE JOB — PICK THE MODEL</text>
+    <text class="t-out" x="1010" y="161">MODEL CHOICE + COST ESTIMATE</text>
+  </g>
+  <line class="anim rule" style="animation-delay:.55s" x1="40" y1="184" x2="1380" y2="184" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- SHEET 00 : 184-240, c=212 -->
+  <g class="anim row" style="animation-delay:.95s">
+    <rect x="52" y="199" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="216" text-anchor="middle">SHEET 00</text>
+    <text class="t-name" x="250" y="218">SITE PREP</text>
+    <text class="t-scope" x="610" y="217">BOOTSTRAP SKILLS · MCP · CLIS</text>
+    <text class="t-out" x="1010" y="217">BOOTSTRAP_REPORT.md</text>
+  </g>
+  <line class="anim rule" style="animation-delay:1.1s" x1="40" y1="240" x2="1380" y2="240" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- SHEET 01 : 240-296, c=268 -->
+  <g class="anim row" style="animation-delay:1.5s">
+    <rect x="52" y="255" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="272" text-anchor="middle">SHEET 01</text>
+    <text class="t-name" x="250" y="274">THE CASING</text>
+    <text class="t-scope" x="610" y="273">RESEARCH 15 LEADS PER GEO</text>
+    <text class="t-out" x="1010" y="273">EXCEL LEAD WORKBOOK</text>
+  </g>
+  <line class="anim rule" style="animation-delay:1.65s" x1="40" y1="296" x2="1380" y2="296" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- GATE A : 296-324, c=310 -->
+  <g class="anim fade" style="animation-delay:2.15s" stroke="#B3402F" stroke-width="1" stroke-dasharray="2 6" opacity=".8">
+    <line x1="48" y1="310" x2="577" y2="310"/>
+    <line x1="843" y1="310" x2="1372" y2="310"/>
+  </g>
+  <g class="anim stamp" style="animation-delay:2.25s">
+    <g transform="rotate(-1 710 310)">
+      <rect x="585" y="298" width="250" height="24" rx="2" fill="#f5f9fb" stroke="#B3402F" stroke-width="1.5"/>
+      <text class="t-gate" x="710" y="314" text-anchor="middle">GATE A — CHECKED BY: HUMAN</text>
+    </g>
+  </g>
+
+  <!-- SHEET 02 : 324-380, c=352 -->
+  <g class="anim row" style="animation-delay:2.7s">
+    <rect x="52" y="339" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="356" text-anchor="middle">SHEET 02</text>
+    <text class="t-name" x="250" y="358">THE DRAWINGS</text>
+    <text class="t-scope" x="610" y="357">ONE BESPOKE PLAN PER BUSINESS</text>
+    <text class="t-out" x="1010" y="357">PLAN REPO PER BUSINESS</text>
+  </g>
+  <line class="anim rule" style="animation-delay:2.85s" x1="40" y1="380" x2="1380" y2="380" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- GATE B : 380-408, c=394 -->
+  <g class="anim fade" style="animation-delay:3.35s" stroke="#B3402F" stroke-width="1" stroke-dasharray="2 6" opacity=".8">
+    <line x1="48" y1="394" x2="577" y2="394"/>
+    <line x1="843" y1="394" x2="1372" y2="394"/>
+  </g>
+  <g class="anim stamp" style="animation-delay:3.45s">
+    <g transform="rotate(.9 710 394)">
+      <rect x="585" y="382" width="250" height="24" rx="2" fill="#f5f9fb" stroke="#B3402F" stroke-width="1.5"/>
+      <text class="t-gate" x="710" y="398" text-anchor="middle">GATE B — CHECKED BY: HUMAN</text>
+    </g>
+  </g>
+
+  <!-- SHEET 03 : 408-464, c=436 -->
+  <g class="anim row" style="animation-delay:3.9s">
+    <rect x="52" y="423" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="440" text-anchor="middle">SHEET 03</text>
+    <text class="t-name" x="250" y="442">THE BUILD</text>
+    <text class="t-scope" x="610" y="441">BUILD DEMO SITES + DRAFT OUTREACH</text>
+    <text class="t-out" x="1010" y="441">DEMO PR + EMAIL_DRAFT.md</text>
+  </g>
+  <line class="anim rule" style="animation-delay:4.05s" x1="40" y1="464" x2="1380" y2="464" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- GATE C : 464-492, c=478 -->
+  <g class="anim fade" style="animation-delay:4.55s" stroke="#B3402F" stroke-width="1" stroke-dasharray="2 6" opacity=".8">
+    <line x1="48" y1="478" x2="577" y2="478"/>
+    <line x1="843" y1="478" x2="1372" y2="478"/>
+  </g>
+  <g class="anim stamp" style="animation-delay:4.65s">
+    <g transform="rotate(-.8 710 478)">
+      <rect x="585" y="466" width="250" height="24" rx="2" fill="#f5f9fb" stroke="#B3402F" stroke-width="1.5"/>
+      <text class="t-gate" x="710" y="482" text-anchor="middle">GATE C — CHECKED BY: HUMAN</text>
+    </g>
+  </g>
+
+  <!-- SHEET 04 : 492-548, c=520 -->
+  <g class="anim row" style="animation-delay:5.1s">
+    <rect x="52" y="507" width="130" height="26" rx="2" fill="#E3D9BE"/>
+    <text class="t-no" x="117" y="524" text-anchor="middle">SHEET 04</text>
+    <text class="t-name" x="250" y="526">THE FILE</text>
+    <text class="t-scope" x="610" y="525">PUSH FULL REPORT TO runs/</text>
+    <text class="t-out" x="1010" y="525">REPORT.md — RUN NOT DONE UNTIL FILED</text>
+  </g>
+  <line class="anim rule" style="animation-delay:5.25s" x1="40" y1="548" x2="1380" y2="548" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- back-edge: SHEET 03 returns to SHEET 02 until the sample passes -->
+  <g class="anim fade" style="animation-delay:5.7s">
+    <path d="M1380 436 H1450 V352 H1394" fill="none" stroke="#9CC3E0" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <polygon points="1386,352 1400,345 1400,359" fill="#9CC3E0"/>
+    <text class="t-note" transform="rotate(-90 1512 345)" x="1512" y="345" text-anchor="middle">SCALE THE BATCH ONLY AFTER THE SAMPLE PASSES</text>
+  </g>
+
+  <!-- footer -->
+  <g class="anim fade" style="animation-delay:6s">
+    <text class="t-foot" x="44" y="578">PICK A MARKET · RUN ONE SHEET · PASS THE GATE · THEN SCALE.</text>
+    <text class="t-foot" x="1370" y="578" text-anchor="end">REV 1 · KEYHOLDER: HUMAN</text>
+  </g>
+</svg>
