@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+
+  <!-- Dollar sign in center -->
+  <g id="dollar">
+    <text x="100" y="125" text-anchor="middle" font-size="80" font-weight="bold" fill="#F59E0B" font-family="system-ui, -apple-system, sans-serif">$</text>
+  </g>
+
+  <!-- Checkmark overlay (cost verified) -->
+  <g id="check" opacity="0.9">
+    <circle cx="150" cy="55" r="22" fill="#22C55E" stroke="#16A34A" stroke-width="2"/>
+    <polyline points="140,55 145,62 160,48" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Label -->
+  <text x="100" y="175" text-anchor="middle" font-size="11" fill="#D1D5DB" font-family="system-ui, -apple-system, sans-serif" font-weight="bold">Cost Estimates</text>
+  <text x="100" y="190" text-anchor="middle" font-size="9" fill="#9CA3AF" font-family="system-ui, -apple-system, sans-serif">Model Recommendations</text>
+</svg>

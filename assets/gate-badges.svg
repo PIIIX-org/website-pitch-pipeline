@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="150" fill="#0B0B0F"/>
+
+  <!-- Gate A Badge -->
+  <g id="gate-a">
+    <!-- Badge background -->
+    <rect x="20" y="30" width="100" height="100" rx="12" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+
+    <!-- Circle with A -->
+    <circle cx="70" cy="80" r="35" fill="#6366F1" opacity="0.1" stroke="#6366F1" stroke-width="2"/>
+    <text x="70" y="90" text-anchor="middle" font-size="48" font-weight="bold" fill="#6366F1" font-family="system-ui, -apple-system, sans-serif">A</text>
+
+    <!-- Label -->
+    <text x="70" y="150" text-anchor="middle" font-size="11" fill="#D1D5DB" font-family="system-ui, -apple-system, sans-serif">Research</text>
+  </g>
+
+  <!-- Gate B Badge -->
+  <g id="gate-b">
+    <!-- Badge background -->
+    <rect x="150" y="30" width="100" height="100" rx="12" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+
+    <!-- Circle with B -->
+    <circle cx="200" cy="80" r="35" fill="#6366F1" opacity="0.1" stroke="#6366F1" stroke-width="2"/>
+    <text x="200" y="90" text-anchor="middle" font-size="48" font-weight="bold" fill="#6366F1" font-family="system-ui, -apple-system, sans-serif">B</text>
+
+    <!-- Label -->
+    <text x="200" y="150" text-anchor="middle" font-size="11" fill="#D1D5DB" font-family="system-ui, -apple-system, sans-serif">Planning</text>
+  </g>
+
+  <!-- Gate C Badge -->
+  <g id="gate-c">
+    <!-- Badge background -->
+    <rect x="280" y="30" width="100" height="100" rx="12" fill="#1F2937" stroke="#6366F1" stroke-width="2"/>
+
+    <!-- Circle with C -->
+    <circle cx="330" cy="80" r="35" fill="#6366F1" opacity="0.1" stroke="#6366F1" stroke-width="2"/>
+    <text x="330" y="90" text-anchor="middle" font-size="48" font-weight="bold" fill="#6366F1" font-family="system-ui, -apple-system, sans-serif">C</text>
+
+    <!-- Label -->
+    <text x="330" y="150" text-anchor="middle" font-size="11" fill="#D1D5DB" font-family="system-ui, -apple-system, sans-serif">Building</text>
+  </g>
+</svg>
