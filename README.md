@@ -9,17 +9,20 @@ Geography is a campaign variable. Aesthetics first. Human gates. No generic temp
 
 <br />
 
-**Multi-geography** • **Any AI model** • **Universal cost estimator** • **Quality-first workflow**
+[![Org](https://img.shields.io/badge/org-your__org-0B0B0F?style=for-the-badge&labelColor=111827)](#campaign-variables)
+[![Geo](https://img.shields.io/badge/geography-any_market-A78BFA?style=for-the-badge&labelColor=111827)](#campaign-variables)
+[![Loops](https://img.shields.io/badge/loops-0→1→2→3-F59E0B?style=for-the-badge&labelColor=111827)](#the-four-loops)
+[![Stack](https://img.shields.io/badge/demos-Next.js_+_shadcn-38BDF8?style=for-the-badge&labelColor=111827)](#stack-defaults)
+[![Gates](https://img.shields.io/badge/quality-human_gates_A·B·C-22C55E?style=for-the-badge&labelColor=111827)](#human-gates)
 
 <br />
 
-<!-- Loop Flow Diagram -->
-![Loop flow diagram: Cost Estimate → Bootstrap → Research → Plan → Build → Report](./assets/loop-flow-diagram.svg#gh-light)
-![Loop flow diagram: Cost Estimate → Bootstrap → Research → Plan → Build → Report](./assets/loop-flow-diagram.svg#gh-dark)
-
-<!-- Brand Signature -->
-<br />
-<img src="./assets/piiix-signature.svg" alt="PIIIX brand signature" width="100" height="100" />
+```text
+  SET GEO ──► RESEARCH ──► PLAN ──► BUILD ──► EMAIL ──► REPORT
+  campaign      Excel       repos    demos     outreach   runs/ on this repo
+                 ▲           ▲        ▲                      ▲
+              Gate A      Gate B   Gate C              must push to GitHub
+```
 
 </div>
 
@@ -61,54 +64,18 @@ Full rules: [`PIPELINE.md`](./PIPELINE.md).
 
 ---
 
-## The loops
+## The four loops
 
 | # | Loop | File | Output | Stops for |
 |---|------|------|--------|-----------|
-| **0a** | **Cost Estimate** (new!) | [`loops/00a-cost-estimate.md`](./loops/00a-cost-estimate.md) | Detects AI model, estimates costs, suggests strategies | Model choice |
 | **0** | Bootstrap | [`loops/00-bootstrap.md`](./loops/00-bootstrap.md) | Skills, MCP, CLIs, bootstrap report | Machine ready |
 | **1** | Research | [`loops/01-research.md`](./loops/01-research.md) | Excel + CSV of leads for **that geo** | **Gate A** |
 | **2** | Plan | [`loops/02-plan.md`](./loops/02-plan.md) | One GitHub repo + plan pack per business | **Gate B** |
 | **3** | Build | [`loops/03-build.md`](./loops/03-build.md) | Demo site PR + `EMAIL_DRAFT.md` | **Gate C** |
 | **4** | Run report | [`loops/04-run-report.md`](./loops/04-run-report.md) | Full report under `runs/` **on this repo** | Report live on GitHub |
 
----
-
-## Cost Estimator (Loop 0a)
-
-**New:** Before you start, run the **universal AI cost estimator** to:
-
-- 🤖 **Detect your AI model** (Claude, GPT, Gemini, Mistral, or any provider)
-- 💰 **Estimate campaign costs** based on leads → businesses → sites  
-- ⚡ **See 3 rankings:** Cheapest, Best Quality, Fastest
-- 🎯 **Choose your strategy:** Quality/Balanced/Budget
-
-```bash
-node utils/cost-estimator.js estimate 5 3 2
-# 5 leads → 3 businesses → 2 sites
-# Shows costs across all providers
-```
-
-**Example output:**
-```
-Current Model: Claude Sonnet 5
-Estimated Cost: $3.46
-Estimated Time: ~2.1 hours
-
-Top 3 Cheapest: Mistral Small ($0.03) | Gemini Flash ($0.07) | GPT-4o-mini ($0.14)
-Top 3 Quality: Claude Opus ($17.33) | GPT-4 Turbo ($7.53) | GPT-4o ($2.39)
-Top 3 Speed: Haiku (~1.7h) | Gemini Flash (~1.8h) | GPT-4o-mini (~1.9h)
-```
-
-See [`utils/README.md`](./utils/README.md) for full documentation and model switching.
-
----
-
-## Documentation
-
 Full system write-up: **[`PIPELINE.md`](./PIPELINE.md)**  
 Install sources: **[`INSTALL.md`](./INSTALL.md)**  
-Quick start guide: **[`HOW_TO_RUN.md`](./HOW_TO_RUN.md)**  
 Tools catalog (Firecrawl, Crawl4AI, Browser Use, Scrapling, Webclaw, marketing & design skills…): **[`TOOLS.md`](./TOOLS.md)**  
 Best design & copy skills (deep research + install ranks): **[`DESIGN_AND_COPY_SKILLS.md`](./DESIGN_AND_COPY_SKILLS.md)**  
 Free image gen + scrape (Pollinations, Unsplash, Pexels…): **[`FREE_IMAGE_TOOLS.md`](./FREE_IMAGE_TOOLS.md)**  
@@ -231,48 +198,6 @@ See [`loops/04-run-report.md`](./loops/04-run-report.md) and [`runs/README.md`](
 | Marketing packs | [ai-marketing-claude](https://github.com/zubair-trabzada/ai-marketing-claude), [digital-marketing-pro](https://github.com/indranilbanerjee/digital-marketing-pro) |
 | Research | Apify, [Firecrawl](https://github.com/firecrawl/firecrawl), [Crawl4AI](https://github.com/unclecode/crawl4ai), [Scrapling](https://github.com/D4Vinci/Scrapling), [Webclaw](https://github.com/0xMassi/webclaw), [Browser Use](https://github.com/browser-use/browser-use) |
 | Free images | **Pollinations MCP** (no key) · Unsplash/Pexels MCP (free keys) · site scrape via Firecrawl/browse — see [FREE_IMAGE_TOOLS.md](./FREE_IMAGE_TOOLS.md) |
-
----
-
-## Brand & Design System
-
-This README uses a **custom design system** with no external badge or icon services:
-
-### Colors (WCAG AA accessible)
-![Brand colors: Indigo #6366F1, Amber #F59E0B, Dark #0B0B0F](./assets/brand-colors.svg)
-
-- **Primary:** Indigo `#6366F1` — core actions, flows, branding
-- **Accent:** Amber `#F59E0B` — energy, progress, gates  
-- **Background:** Near-black `#0B0B0F` — dark-first design
-- ✓ All contrast ratios tested for WCAG AA compliance
-- ✓ Accessible to colorblind users (no color-only information)
-
-### Custom SVG Assets
-All illustrations in this repo are **committed SVGs** (no Figma exports, no shield.io):
-
-- Loop flow diagram: `assets/loop-flow-diagram.svg`
-- Gate badges (A/B/C): `assets/gate-badges.svg`
-- Brand signature: `assets/piiix-signature.svg`
-- Color palette: `assets/brand-colors.svg`
-- Cost estimator icon: `assets/cost-estimator-icon.svg`
-
-See `assets/` directory for source.
-
----
-
-## License
-
-MIT — Use, fork, modify freely. See [`LICENSE`](./LICENSE).
-
----
-
-<div align="center">
-
-**Built for quality local business pitches, any geography, any org.**
-
-![PIIIX signature](./assets/piiix-signature.svg#gh-dark "PIIIX-org")
-
-</div>
 | MCP | shadcn, magic, pollinations, unsplash, pexels, webclaw, scrapling |
 | Motion | `gsap-skills`, Emil animation skills |
 | Meta / ops | [SkillOpt](https://github.com/microsoft/SkillOpt), [kepano-obsidian](https://github.com/kepano/kepano-obsidian) |
