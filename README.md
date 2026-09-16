@@ -19,6 +19,42 @@ Point agents at a whole city without structure and you get template sites with i
 
 ---
 
+## ⚡ Installing the Agent Skill
+
+This pipeline is packaged as an agent skill compatible with the open agent ecosystem (`skills.sh`, Claude Code, Cursor, Antigravity, etc.).
+
+### Automatic Model Selection (Recommended)
+Run the smart installer, which automatically detects if you are using a Gemini model and installs the `gemini-native` branch, or defaults to `main` for Claude Code:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/PIIIX-org/website-pitch-pipeline/main/install.sh | bash
+# Or locally:
+./install.sh
+```
+
+### Manual Installation by Runtime
+
+| Active Model / Agent | Command | Why |
+|---|---|---|
+| **Google Gemini / Antigravity** | `npx skills add PIIIX-org/website-pitch-pipeline#gemini-native` | **Zero Firecrawl / Zero 3rd-party scrapers**. Uses native `google_maps`, `google_search`, and `url_context`. |
+| **Claude Code / Generic LLMs** | `npx skills add PIIIX-org/website-pitch-pipeline` | Standard multi-tool agent loop stack (Sheet 00 through Sheet 04). |
+
+---
+
+## ⚡ Gemini Native Branch (`gemini-native`)
+
+If you want to run this pipeline **without Firecrawl, Apify, or any paid web scraping API**, check out the permanent [`gemini-native`](https://github.com/PIIIX-org/website-pitch-pipeline/tree/gemini-native) branch.
+
+It replaces the scraping stack entirely with Gemini platform built-ins:
+- **`google_maps`**: Real verified local businesses with physical addresses and phone numbers.
+- **`google_search`**: Live web citations and business directory lookups.
+- **`url_context`**: Real-time webpage content extraction directly inside Gemini (no headless browsers).
+- **`code_execution`**: Native Python code execution to build the Excel/CSV lead sheets.
+- **Multimodal Vision**: Direct visual inspection of target site screenshots to score design flaws.
+- **Native Chrome Screenshots**: Headless screenshots using the browser already on macOS/Linux.
+
+---
+
 ## The drawing set
 
 <img src="./assets/sheet-register.svg" width="100%" alt="Sheet register table listing six sheets: 00a The Takeoff (price the job), 00 Site Prep (bootstrap), 01 The Casing (research 15 leads per geo), 02 The Drawings (one bespoke plan per business), 03 The Build (demo sites plus outreach drafts), 04 The File (push full report to runs/). Red slips reading GATE A, GATE B and GATE C, each checked by a human, sit between sheets 01 through 04. A dashed return arrow notes: scale the batch only after the sample passes." />
