@@ -74,12 +74,12 @@ Motion / components research:
   - shadcn MCP for component inventory candidates
   - magic MCP for distinctive UI component ideas (do not clone same set every time)
 
-Assets / site evidence (see FREE_IMAGE_TOOLS.md):
-  - FIRST: Firecrawl, Crawl4AI, Webclaw, Scrapling, or /browse to pull logo/photos/og:image from their site
-  - gstack /browse for screenshots of current site
-  - FREE stock: Unsplash MCP / Pexels MCP (with free API keys + attribution) for lifestyle fillers
-  - FREE gen: Pollinations MCP (@pollinations/mcp or @pollinations/model-context-protocol) — no key — for mock heroes when brand has no usable images
-  - paid higgsfield only if human approves; never invent fake real staff faces
+Assets / site evidence:
+  - FIRST: Gemini native `url_context` to pull brand content, logo, and og:image directly from the URL
+  - Native Google Chrome (`--headless=new --screenshot`) for crisp full-page screenshots without Puppeteer/Firecrawl
+  - Gemini Multimodal Vision to inspect the screenshot and diagnose layout/design flaws
+  - FREE stock: Unsplash / Pexels (with attribution) for lifestyle fillers
+  - FREE gen: Pollinations MCP (@pollinations/mcp) — no key — for mock heroes when brand has no usable images
 
 ## Non-negotiables
 - No shared visual template across businesses

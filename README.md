@@ -19,6 +19,27 @@ Point agents at a whole city without structure and you get template sites with i
 
 ---
 
+## ⚡ Gemini Native Mode (Zero Firecrawl / Zero 3rd-Party Scrapers)
+
+This branch (`gemini-native`) eliminates all external web scraping dependencies (Firecrawl, Apify, Crawl4AI) by using **Gemini's native platform tools**:
+
+- **Local Lead Discovery**: Native **Google Maps Grounding (`google_maps`)** queries real businesses with verified addresses, phone numbers, and websites.
+- **Website Scraping & Reading**: Native **URL Context (`url_context`)** fetches and ingests live pages directly into Gemini without headless browsers or proxy fees.
+- **Visual Design Audit**: Native **Multimodal Vision** inspects website screenshots to detect outdated 2010s layouts, broken viewports, and weak typography.
+- **Lead Workbook Export**: Native **Code Execution (`code_execution`)** runs Python in-sandbox to generate clean CSV and Excel files.
+
+### Installing the Skill
+
+```bash
+# Explicit Gemini Native install:
+npx skills add PIIIX-org/website-pitch-pipeline#gemini-native
+
+# Or use the smart auto-detect installer (picks this branch if Gemini is active):
+./install.sh
+```
+
+---
+
 ## The drawing set
 
 <img src="./assets/sheet-register.svg" width="100%" alt="Sheet register table listing six sheets: 00a The Takeoff (price the job), 00 Site Prep (bootstrap), 01 The Casing (research 15 leads per geo), 02 The Drawings (one bespoke plan per business), 03 The Build (demo sites plus outreach drafts), 04 The File (push full report to runs/). Red slips reading GATE A, GATE B and GATE C, each checked by a human, sit between sheets 01 through 04. A dashed return arrow notes: scale the batch only after the sample passes." />

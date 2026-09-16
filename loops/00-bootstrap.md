@@ -111,27 +111,18 @@ Source skills: https://github.com/higgsfield-ai/skills
 CLI: npm install -g @higgsfield/cli
 Auth: follow higgsfield login docs
 
-### B5. Firecrawl (site research) — https://github.com/firecrawl/firecrawl
-  npm install -g firecrawl-cli
-  export FIRECRAWL_API_KEY=...   # https://firecrawl.dev
-  # Advanced self-host: clone firecrawl/firecrawl and follow Docker docs
-  which firecrawl && firecrawl --help | head
-
-### B6. Crawl4AI — https://github.com/unclecode/crawl4ai
-  pip install -U crawl4ai
-  # run package browser setup if required (crawl4ai-setup / playwright install)
-  python -c "import crawl4ai; print('crawl4ai ok')"
-
-### B7. Browser Use — https://github.com/browser-use/browser-use
-  # Prefer uv + Python 3.12 per upstream
-  uv pip install browser-use || pip install browser-use
-  browser-use skill install   # when CLI provides it
-  # Docs: https://docs.browser-use.com
-
-### B8. Scrapling — https://github.com/D4Vinci/Scrapling
-  pip install "scrapling[all]"
-  scrapling install           # browser deps
-  # MCP: pip install "scrapling[ai]"
+### B5. Gemini Native Toolchain (Zero 3rd-party scrapers)
+  - Verify GEMINI_API_KEY is present:
+    echo $GEMINI_API_KEY
+  - Native tools enabled automatically on Gemini 3+ / Antigravity:
+    - google_maps (Local business discovery)
+    - google_search (Live citations & directory lookup)
+    - url_context (Direct webpage scraping without Firecrawl)
+    - code_execution (In-sandbox Python data processing)
+  - Verify native Chrome for screenshots:
+    ls "/Applications/Google Chrome.app" || which google-chrome || which chromium
+  - Optional Python SDK:
+    pip install -U google-genai
 
 ### B9. Webclaw — https://github.com/0xMassi/webclaw
   brew install webclaw || cargo install --git https://github.com/0xMassi/webclaw.git webclaw-cli
@@ -239,12 +230,10 @@ Checklist (pass/fail each):
 [ ] copy Tier S: coreyhaines31/marketingskills, stop-slop, no-ai-slop, ogilvy
 [ ] ux-writing-skill + edit-article (or SKIP)
 [ ] DESIGN_AND_COPY_SKILLS.md present in pipeline repo
-[ ] apify CLI + auth (or marked SKIP with reason)
-[ ] firecrawl CLI/API (https://github.com/firecrawl/firecrawl)
-[ ] crawl4ai installed
-[ ] browser-use installed (or SKIP + reason)
-[ ] scrapling + browsers
-[ ] webclaw CLI and/or MCP
+[ ] GEMINI_API_KEY (or Google Antigravity / Gemini CLI environment)
+[ ] Gemini Native Tools (google_maps, google_search, url_context, code_execution)
+[ ] Native Google Chrome (for headless screenshots)
+[ ] python3 and/or node runtime
 [ ] no-ai-slop skill
 [ ] emilkowalski/skills
 [ ] UditAkhourii/adhd (npx skills add UditAkhourii/adhd)
@@ -254,7 +243,7 @@ Checklist (pass/fail each):
 [ ] skillopt optional status
 [ ] kepano vault template optional status
 [ ] brane-code optional status
-[ ] MCP: shadcn, magic, pollinations FREE gen (no key), webclaw reachable
+[ ] MCP: shadcn, magic, pollinations FREE gen (no key)
 [ ] optional Unsplash + Pexels free keys for stock
 [ ] FREE_IMAGE_TOOLS.md present
 [ ] higgsfield optional paid status
@@ -275,10 +264,11 @@ Checklist (pass/fail each):
 | Required | Optional |
 |----------|----------|
 | Node, git, gh, bun, pip/uv | Higgsfield |
-| gstack + `/browse` | n8n MCP |
-| Design + copy skills | Ponytail |
-| shadcn + magic + pollinations MCP | SkillOpt |
-| Firecrawl + Crawl4AI | Kepano vault |
+| GEMINI_API_KEY / Antigravity | n8n MCP |
+| Native Chrome (headless) | Ponytail |
+| Design + copy skills | SkillOpt |
+| shadcn + magic + pollinations MCP | Kepano vault |
+| Gemini native tools (google_maps, url_context) | Webclaw |
 | Scrapling + Webclaw (or documented SKIP) | |
 | no-ai-slop + emilkowalski/skills | |
 | UditAkhourii/adhd | branerail, brane-code |

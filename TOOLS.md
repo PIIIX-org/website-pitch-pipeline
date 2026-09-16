@@ -18,47 +18,55 @@ Sources are official GitHub repos. Prefer upstream README if install commands ch
 
 ---
 
-## A. Web research, crawl & browser automation
+## A. Gemini Native Toolchain (Zero 3rd-party scrapers)
 
-### 1. Firecrawl — [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
+### 1. Gemini URL Context (`url_context`)
 
 | | |
 |--|--|
-| **Role** | Search, scrape, and turn pages into clean data/Markdown at scale |
-| **Loops** | **1** research, **2** brand/asset pull from existing sites |
-| **Required?** | Yes (CLI and/or API) |
-| **Docs** | https://firecrawl.dev · https://docs.firecrawl.dev |
+| **Role** | Directly fetch and ingest live web pages into Gemini as Markdown/content without any third-party scrapers |
+| **Loops** | **1** weak site audits, **2** brand content and asset pull |
+| **Required?** | Yes (Built-in to Gemini 3+ / Antigravity) |
+| **Setup** | Enabled via `tools=[{"type": "url_context"}]` |
 
-```bash
-# Cloud CLI (common)
-npm install -g firecrawl-cli
-export FIRECRAWL_API_KEY="..."   # https://firecrawl.dev
-
-# Self-host / monorepo (advanced — full stack)
-git clone https://github.com/firecrawl/firecrawl.git
-# follow repo README for Docker / local API
-```
-
-Also already used via this machine’s `firecrawl` CLI when present.
+No Firecrawl API key, no headless browser overhead, and no scraping infrastructure.
 
 ---
 
-### 2. Crawl4AI — [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai)
+### 2. Google Maps Grounding (`google_maps`)
 
 | | |
 |--|--|
-| **Role** | Open-source LLM-friendly crawler → clean Markdown for agents |
-| **Loops** | **1** deep site audits, **2** content extraction when Firecrawl unavailable or for local-only crawls |
-| **Required?** | Yes (local fallback / bulk crawl) |
-| **Docs** | https://crawl4ai.com |
+| **Role** | Discover real local businesses in any campaign GEOGRAPHY with physical locations, verified phones, and official sites |
+| **Loops** | **1** research & lead casing |
+| **Required?** | Yes (Built-in to Gemini) |
+| **Setup** | Enabled via `tools=[{"type": "google_maps"}]` |
 
-```bash
-pip install -U crawl4ai
-crawl4ai-setup          # installs browser deps when prompted by package
-# or: python -m playwright install
-```
+Replaces Apify Google Maps scrapers and directory scraping with official Google Maps data.
 
-Prefer for offline-friendly, key-light crawls. Pair with Firecrawl for cloud scale.
+---
+
+### 3. Google Search Grounding (`google_search`)
+
+| | |
+|--|--|
+| **Role** | Real-time web search and live citations for local directories and business presence |
+| **Loops** | **1** research & contact discovery |
+| **Required?** | Yes (Built-in to Gemini) |
+| **Setup** | Enabled via `tools=[{"type": "google_search"}]` |
+
+---
+
+### 4. Native Headless Google Chrome
+
+| | |
+|--|--|
+| **Role** | Full-page screenshots of existing weak websites using the local browser binary |
+| **Loops** | **2** drawings & visual evidence, **3** demo review |
+| **Required?** | Recommended (macOS / Linux native) |
+| **Setup** | `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --screenshot=site.png <url>` |
+
+Zero npm install, zero Puppeteer/Playwright packages required. Uses the browser already on your machine.
 
 ---
 

@@ -40,16 +40,12 @@ TARGET_COUNT: 15
 Loop 0 required items PASS. Read ./pipeline-runs/BOOTSTRAP_REPORT.md if present.
 If GEOGRAPHY or GEO_SLUG is missing, stop and ask — never invent a default location.
 
-## Tools to use (prefer stack in TOOLS.md)
-- apify-ultimate-scraper (Maps / directories for the target country) when auth available
-- Firecrawl (https://github.com/firecrawl/firecrawl) for search/scrape at scale
-- Crawl4AI (https://github.com/unclecode/crawl4ai) for local LLM-friendly crawls → Markdown
-- Scrapling (https://github.com/D4Vinci/Scrapling) when sites need adaptive/stealth fetch
-- Webclaw (https://github.com/0xMassi/webclaw) for fast local-first extract / MCP
-- Browser Use (https://github.com/browser-use/browser-use) for multi-step interactive verification
-- gstack /browse or /scrape for lighter verification
-- AI Marketing Claude / Digital Marketing Pro for site audit signals when installed
-- WebSearch for gaps (query in the local language when helpful)
+## Tools to use (Gemini Native — Zero 3rd party scrapers)
+- Gemini Native Google Maps Grounding (`google_maps`) to discover verified businesses in GEOGRAPHY
+- Gemini Native Google Search Grounding (`google_search`) for finding websites & local citations
+- Gemini Native URL Context (`url_context`) to directly fetch and inspect live business websites
+- Gemini Native Code Execution (`code_execution`) to output structured CSV / Excel files
+- Native Headless Chrome for visual screenshots when needed
 - Do NOT invent emails; respect ToS and local law
 
 ## Objective
