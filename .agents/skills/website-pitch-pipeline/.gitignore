@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+leads/
+nyc-leads/
+pipeline-runs/
+nyc-pipeline/
+*.xlsx
+# Keep runs/ tracked (pipeline reports must live in git)
+!runs/
+!runs/**
+runs/**/artifacts/**
+!runs/_template/**
+node_modules/
+.claude/settings.local.json

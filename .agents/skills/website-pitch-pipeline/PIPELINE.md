@@ -1,0 +1,333 @@
+# Local Business Website Pitch Pipeline
+
+> Find local businesses with weak or missing websites → research them → plan unique site concepts → build demo sites → draft outreach.  
+> Goal: get owners to the negotiation table. **Aesthetics and clarity beat deep functionality** on the first pass.
+
+**Geography is not fixed.** Every run sets a campaign location (city, region, multi-city, or country-wide niche). Do not assume New York or any other default.
+
+---
+
+## Campaign variables (set before Loop 1)
+
+Fill this block at the start of every run. Agents must not invent a location.
+
+```text
+CAMPAIGN_NAME:     [e.g. istanbul-tailors-batch-1, berlin-auto-repair-q3]
+GEOGRAPHY:         [e.g. Istanbul, TR | Berlin, DE | NYC five boroughs | national-US plumbers]
+GEO_SLUG:          [short slug for files/repos, e.g. istanbul, berlin, nyc, us-plumbers]
+LOCALE / LANGUAGE: [e.g. en, tr, de — site copy + outreach language]
+VERTICALS:         [1–2 niches, e.g. tailors, auto repair]
+BATCH_SIZE:        [default 5 plans/builds; research count often 15]
+ORG:               [your GitHub org or username]
+```
+
+### Geography rules
+
+- **Not locked** to one city, country, or language.
+- Scope can be: neighborhood · city · metro · multi-city · region · country · niche-without-hard-geo (still record where each business operates).
+- Excel always includes **location columns** that match the campaign (city / region / country as needed — not only “borough”).
+- Repo names, tags, and lead folders use `GEO_SLUG`, never a hardcoded city.
+- Design and copy should reflect **local** culture, language, and trust signals for that geography.
+
+---
+
+## Pipeline order
+
+| Loop | File | Job | Gate |
+|------|------|-----|------|
+| **0** | [`loops/00-bootstrap.md`](./loops/00-bootstrap.md) | Install skills, plugins, MCP, CLIs on a new machine | Machine ready |
+| **1** | [`loops/01-research.md`](./loops/01-research.md) | Find businesses → Excel workbook | **Gate A** — human approves Excel |
+| **2** | [`loops/02-plan.md`](./loops/02-plan.md) | Unique plan + GitHub repo per business | **Gate B** — human approves first plan |
+| **3** | [`loops/03-build.md`](./loops/03-build.md) | Implement demos + outreach email | **Gate C** — human approves first build |
+| **4** | [`loops/04-run-report.md`](./loops/04-run-report.md) | Full run report → push to this repo | Report live on GitHub |
+
+**Never skip gates.** Quality collapses when agents batch-plan or batch-build without a human sample check.
+
+### Mandatory: run report on pipeline completion
+
+```text
+The pipeline run is NOT DONE until a full report is uploaded to:
+  <ORG>/website-pitch-pipeline
+  path: runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
+```
+
+- Required after the batch finishes, the human says “close the run,” or the run aborts mid-way (mark status `partial` / `aborted`).
+- **Do not** claim “pipeline complete” without a GitHub URL to `REPORT.md`.
+- Template: [`runs/_template/`](./runs/_template/) · rules: [`runs/README.md`](./runs/README.md) · loop: [`loops/04-run-report.md`](./loops/04-run-report.md).
+
+---
+
+## Shared project rules
+
+```text
+PROJECT: Local Business Website Pitch Pipeline
+ORG:     set per campaign (see Campaign variables)
+BATCH:   5 businesses max unless a human expands scope
+GEO:     set per campaign (see Campaign variables)
+```
+
+### Human gates
+
+| Gate | After | Human checks |
+|------|--------|--------------|
+| **A** | Loop 1 | Excel is complete, geo matches campaign, contacts are public, fit scores make sense |
+| **B** | First Loop 2 repo | Plan is unique, local, usable, not a generic template |
+| **C** | First Loop 3 site | UI is sharp, mobile works, distinct from other demos, language/locale correct |
+
+### Legal & contact
+
+- Use **only publicly listed** business emails / phones / contact forms.
+- Every email cell must include an **Email Source URL**.
+- **Do not invent** emails or scrape personal inboxes.
+- Respect local marketing / spam / data rules for the campaign country when known.
+- Demo sites are **sales concepts** unless the owner has contracted work.
+- Do not claim a site is “already live on their domain” unless that is true.
+
+### Stop conditions
+
+- Never claim “done” without checklist evidence.
+- Prefer fewer excellent leads over many weak ones.
+- “Do not stop until done” always means **done = written acceptance criteria**, not infinite polish.
+- **Run complete** additionally requires Loop 4: report pushed to `<ORG>/website-pitch-pipeline` under `runs/`.
+
+### Stack defaults (pitch / demo sites)
+
+| Layer | Default | Notes |
+|-------|---------|--------|
+| Frontend | Next.js (App Router) + TypeScript + Tailwind + shadcn/ui | Marketing-first |
+| Motion | GSAP and/or anime.js | Only when the concept needs it |
+| Backend / DB | **Omit for v0** | Add Nest/PHP/Postgres only if the brief truly needs storage |
+| Preferred languages | HTML, CSS, JS, Next.js; PHP / Node / Nest when justified | Postgres if data is required |
+
+User preferences for later full products: HTML, CSS, JavaScript, Next.js; backend PHP, Node.js, Nest.js; database PostgreSQL. **Pitch demos should stay light.**
+
+---
+
+## Skills map
+
+### Design / UI (Loops 2–3) — research Tier S
+
+Full ranking: [`DESIGN_AND_COPY_SKILLS.md`](./DESIGN_AND_COPY_SKILLS.md)
+
+| Skill / command | Role | Signal |
+|-----------------|------|--------|
+| `frontend-design` ([anthropics/skills](https://github.com/anthropics/skills)) | Official anti-generic UI direction | ~695K installs |
+| `impeccable` ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)) | Design language, PRODUCT/DESIGN.md, polish/audit | ~203K+ |
+| `web-design-guidelines` ([vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)) | Vercel web quality bar | ~484K |
+| `design-taste-frontend` + [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | Landings anti-slop + style lanes | ~281K |
+| `ui-ux-pro-max` ([nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)) | Install always; **invoke when needed** for palettes, type pairings, product-type UI | ~280K |
+| `high-end-visual-design` / `minimalist-ui` / `industrial-brutalist-ui` | **One** lane per business | 180–220K each |
+| `brandkit` · `imagegen-frontend-web` · `image-to-code` · `redesign-existing-projects` | Identity / refs / redesigns | taste pack |
+| [emilkowalski/skills](https://github.com/emilkowalski/skills) | Design-engineer motion/UI | ~156K |
+| `design-an-interface` (mattpocock) | Interaction / IA judgment | ~170K |
+| `extract-design-system` | Tokens from existing sites | ~126K |
+| gstack `/design-consultation` · `/design-shotgun` · `/design-review` · `/qa` · `/browse` | System, variants, visual QA | gstack |
+| `gsap-skills` · `diagram-design` | Motion + flows | plugins |
+
+### Copy / writing / outreach (Loops 2–3) — research Tier S
+
+| Skill | Role | Signal |
+|-------|------|--------|
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) pack | copywriting, copy-editing, cold-email, page-cro, marketing-psychology, seo-audit, content-strategy, emails, ad-creative | ~41k★ pack |
+| `stop-slop` ([hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop)) | Remove AI writing tells | ~14k★ |
+| `no-ai-slop` ([petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop)) | Second anti-slop pass | specialist |
+| `ogilvy` ([boraoztunc/skills](https://github.com/boraoztunc/skills)) | Sell-first advertising principles | specialist |
+| `ux-writing-skill` ([content-designer/ux-writing-skill](https://github.com/content-designer/ux-writing-skill)) | UI microcopy | specialist |
+| `edit-article` (mattpocock) | Long-form polish | ~155K |
+| AI Marketing Claude · Digital Marketing Pro | Suite audits / agency SEO | suites |
+
+### Design-engineer motion (Loops 2–3)
+
+| Skill | Role |
+|-------|------|
+| [emilkowalski/skills](https://github.com/emilkowalski/skills) | Animation taste, review-animations, apple-design, pick-ui-library |
+
+### Ideation & architecture — [UditAkhourii](https://github.com/UditAkhourii)
+
+| Skill / tool | Role |
+|--------------|------|
+| [ADHD](https://github.com/UditAkhourii/adhd) | Parallel divergent ideation; unique directions without early anchoring |
+| [Branerail](https://github.com/UditAkhourii/branerail) | CTO-level architecture, specs, resilience, DESIGN.md discipline |
+| [Brane Code](https://github.com/UditAkhourii/brane-code) | Optional model-agnostic coding runtime |
+
+### Research (Loop 1)
+
+| Skill / tool | Role |
+|--------------|------|
+| `apify-ultimate-scraper` | Maps / social / leads (needs Apify token) |
+| [Firecrawl](https://github.com/firecrawl/firecrawl) | Cloud/self-host scrape + search at scale |
+| [Crawl4AI](https://github.com/unclecode/crawl4ai) | Local LLM-friendly crawl → Markdown |
+| [Scrapling](https://github.com/D4Vinci/Scrapling) | Adaptive / stealth scrape + optional MCP |
+| [Webclaw](https://github.com/0xMassi/webclaw) | Fast local-first extract CLI/MCP |
+| [Browser Use](https://github.com/browser-use/browser-use) | Agentic browser for hard interactive sites |
+| gstack `/scrape` · `/browse` | Structured pulls + headless QA |
+| WebSearch | Discovery gaps |
+
+Full install + loop matrix: **[`TOOLS.md`](./TOOLS.md)**.
+
+### Free images (gen + scrape) — research
+
+Full catalog: [`FREE_IMAGE_TOOLS.md`](./FREE_IMAGE_TOOLS.md)
+
+| Tool | Role | Free? |
+|------|------|-------|
+| **Pollinations MCP** `@pollinations/mcp` | AI image gen for demos | **Yes — no key** |
+| **Pollinations** `@pollinations/model-context-protocol` | Alt free gen package | **Yes — no key** |
+| **Unsplash MCP** | Stock search + attribution | Free API key |
+| **Pexels MCP** | Stock photos/video | Free API key |
+| Firecrawl · Crawl4AI · Webclaw · Scrapling · `/browse` | Scrape logos/photos from business site | Free OSS / free tiers |
+| `imagegen-frontend-web` | Composition direction for gen | Free skill |
+| `higgsfield-*` | Paid upgrade only | Paid |
+
+**Order:** scrape brand assets → Unsplash/Pexels if needed → Pollinations for missing mock visuals.
+
+### Optional creative & meta
+
+| Skill / MCP | Role |
+|-------------|------|
+| `magic` MCP (21st.dev) | UI component ideas |
+| `shadcn` MCP | shadcn components |
+| [SkillOpt](https://github.com/microsoft/SkillOpt) | Optimize pipeline skills from trajectories (optional) |
+| [kepano-obsidian](https://github.com/kepano/kepano-obsidian) | Campaign note vault template (optional ops) |
+
+---
+
+## MCP servers
+
+| Server | How it runs | Required? |
+|--------|-------------|-----------|
+| **shadcn** | `npx -y shadcn@latest mcp` | Yes (build) |
+| **magic** (21st.dev) | `npx -y @21st-dev/magic@latest` + `API_KEY` | Recommended |
+| **pollinations** | `npx -y @pollinations/mcp` | **Yes — free image gen** |
+| **pollinations-images** | `npx -y @pollinations/model-context-protocol` | Alt free gen (pick one Pollinations server) |
+| **unsplash** | free `UNSPLASH_ACCESS_KEY` | Recommended stock |
+| **pexels** | free `PEXELS_API_KEY` | Recommended stock |
+| **webclaw** | `webclaw-mcp` or brew/npx per [0xMassi/webclaw](https://github.com/0xMassi/webclaw) | Recommended (local extract) |
+| **scrapling** | via `pip install "scrapling[ai]"` MCP | Recommended (hard scrapes) |
+| **n8n** | HTTP MCP URL + bearer | Optional automation |
+
+**Secrets:** use environment variables. Never commit API keys or tokens.
+
+```bash
+export MAGIC_API_KEY="..."
+export N8N_MCP_URL="..."
+export N8N_MCP_TOKEN="..."
+export APIFY_TOKEN="..."
+export FIRECRAWL_API_KEY="..."   # if using Firecrawl cloud
+export UNSPLASH_ACCESS_KEY="..." # free stock (optional)
+export PEXELS_API_KEY="..."      # free stock (optional)
+# Pollinations free gen: no key required for basic use
+```
+
+See [`mcp.example.json`](./mcp.example.json) · [`FREE_IMAGE_TOOLS.md`](./FREE_IMAGE_TOOLS.md).
+
+---
+
+## Handoff artifacts
+
+Paths use campaign slugs — replace placeholders.
+
+```text
+./pipeline-runs/BOOTSTRAP_REPORT.md
+./leads/<GEO_SLUG>-business-leads-batch-1.xlsx
+./leads/<GEO_SLUG>-business-leads-batch-1.csv
+./leads/<GEO_SLUG>-summary.md
+<ORG>/<GEO_SLUG>-<category>-<business>/    # Loops 2–3 (one repo per business)
+
+# After run (Loop 4) — MUST be on GitHub in this repo:
+<ORG>/website-pitch-pipeline/runs/<YYYY-MM-DD>/<GEO_SLUG>-<campaign-slug>/
+  REPORT.md
+  SUMMARY.md
+  checklist.md            # recommended
+  leads-snapshot.csv      # recommended
+  artifacts/              # optional
+```
+
+### Per-business repo tags
+
+| Tag | Meaning |
+|-----|---------|
+| `web-lead` | Part of this pipeline |
+| `geo:<GEO_SLUG>` | Campaign geography |
+| `pending-beta` | Plan complete, ready to implement |
+| `in-progress` | Build underway |
+| `ready-for-review` | PR open for human |
+| `ready-for-outreach` | Demo + email draft ready |
+| `batch-1` | First batch (increment as needed) |
+
+### Repo naming
+
+```text
+<GEO_SLUG>-<category-slug>-<business-slug>
+```
+
+Examples:
+
+- `istanbul-tailor-moda-alterations`
+- `berlin-auto-kreuzberg-garage`
+- `nyc-plumber-east-village-flow` (NYC is valid when *chosen*, not required)
+
+---
+
+## Scoring (replaces vague “100 then 120”)
+
+Self-review checklist, each item **0–10** (max **100**). Plan must reach **≥90** before `pending-beta`.
+
+1. Positioning clarity  
+2. Unique visual direction (not generic AI SaaS)  
+3. Strengths reflected on homepage  
+4. Weaknesses addressed (trust, CTA, clarity, mobile)  
+5. Page-by-page IA fits that business  
+6. Component inventory complete  
+7. Copy direction specific (not lorem); **locale/language correct**  
+8. Asset list complete  
+9. `implementation.md` executable without questions  
+10. Repo hygiene (README, tags, structure) + geo tags set  
+
+**Second pass:** improve the weakest three dimensions; target **≥95**. Do not invent a fake “120” scale.
+
+---
+
+## Suggested operating order
+
+1. Set **Campaign variables** (geo, language, verticals, batch).  
+2. Run **Loop 0** on any new machine → read `BOOTSTRAP_REPORT.md`.  
+3. Run **Loop 1** for that geography → **Gate A**.  
+4. Run **Loop 2** for **one** business → **Gate B**.  
+5. Run **Loop 3** for that site → **Gate C**.  
+6. Only then scale Loops 2–3 across the rest of the batch.  
+7. Run **Loop 4** — upload full report to `runs/` on this repo (**required before “done”**).
+
+---
+
+## How to run a loop in Claude Code
+
+Paste the contents of the matching file under `loops/`, **after filling Campaign variables**.
+
+```text
+/loop [auto]
+# paste loop body with GEOGRAPHY / GEO_SLUG filled in
+```
+
+Prefer **one loop per session** so context stays clean.
+
+---
+
+## Related files
+
+| File | Purpose |
+|------|---------|
+| [README.md](./README.md) | Project overview & quick start |
+| [PIPELINE.md](./PIPELINE.md) | This document (full system) |
+| [loops/00-bootstrap.md](./loops/00-bootstrap.md) | Machine setup |
+| [loops/01-research.md](./loops/01-research.md) | Lead research |
+| [loops/02-plan.md](./loops/02-plan.md) | Site planning + repos |
+| [loops/03-build.md](./loops/03-build.md) | Implementation + email |
+| [loops/04-run-report.md](./loops/04-run-report.md) | Full run report → push to this repo |
+| [runs/README.md](./runs/README.md) | Run report folder rules |
+| [runs/_template/](./runs/_template/) | REPORT.md + SUMMARY.md templates |
+| [mcp.example.json](./mcp.example.json) | MCP config template (no secrets) |
+| [INSTALL.md](./INSTALL.md) | Install sources cheat sheet |
+| [TOOLS.md](./TOOLS.md) | Required external tools/skills catalog + install |
+| [DESIGN_AND_COPY_SKILLS.md](./DESIGN_AND_COPY_SKILLS.md) | Research: best design + writing skills ranked |
+| [FREE_IMAGE_TOOLS.md](./FREE_IMAGE_TOOLS.md) | Research: free image gen + scrape MCPs/skills |

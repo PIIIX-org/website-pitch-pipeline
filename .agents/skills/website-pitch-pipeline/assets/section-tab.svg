@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" role="img" aria-label="Manila folder-tab section divider labeled DOC NO.">
+  <title>SECTION TAB — manila folder-tab divider, DOC NO. label slot</title>
+  <rect width="420" height="64" fill="#272625"/>
+  <!-- folder ridge line -->
+  <path d="M6 55H414" stroke="#9CC3E0" stroke-width="1.5"/>
+  <!-- manila tab -->
+  <path d="M34 55L48 15q2-5 8-5h308q6 0 8 5l14 40Z" fill="#E3D9BE"/>
+  <text x="210" y="42" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="3"
+        fill="#272625" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">DOC NO. &#8212;&#8212;</text>
+</svg>

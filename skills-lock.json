@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "website-pitch-pipeline": {
+      "source": "PIIIX-org/website-pitch-pipeline",
+      "ref": "gemini-native",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "1e7b2bee9b23585530761c7ac4d20ac2ebd223ac89787923dc5a257ef0e5854d"
+    }
+  }
+}

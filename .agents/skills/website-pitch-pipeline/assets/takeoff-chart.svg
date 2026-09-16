@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" font-family="ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', 'Courier New', monospace">
+  <title>Takeoff sheet: cost vs quality for 12 models, derived from utils/cost-estimator.js (5 leads / 5 plans / 5 sites)</title>
+  <style>
+    .anim { animation: plot .5s ease-out backwards; }
+    @keyframes plot { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } }
+  </style>
+  <defs>
+    <pattern id="bp-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2E5C8A" stroke-width="0.6" opacity="0.28"/>
+    </pattern>
+  </defs>
+
+  <!-- field + sheet -->
+  <rect width="1600" height="700" fill="#272625"/>
+  <rect x="24" y="24" width="1552" height="652" fill="#0E2A3F" stroke="#f5f9fb" stroke-width="1.5"/>
+  <rect x="24" y="24" width="1552" height="652" fill="url(#bp-grid)"/>
+  <rect x="36" y="36" width="1528" height="572" fill="none" stroke="#2E5C8A" stroke-width="1"/>
+
+  <!-- headline takeaway -->
+  <text x="64" y="82" font-size="26" fill="#f5f9fb" textLength="452" lengthAdjust="spacingAndGlyphs">THE SAME JOB: $0.06 &#8212; $32.25.</text>
+  <text x="534" y="82" font-size="26" fill="#f5f9fb" textLength="437" lengthAdjust="spacingAndGlyphs">PRICE IT BEFORE YOU TAKE IT.</text>
+  <line x1="534" y1="92" x2="971" y2="92" stroke="#B3402F" stroke-width="3"/>
+  <text x="64" y="114" font-size="14" fill="#9CC3E0">12 MODELS PRICED AGAINST ONE BILL OF QUANTITIES &#8212; 270,000 TOKENS IN / 376,000 TOKENS OUT</text>
+
+  <!-- gridlines -->
+  <g stroke="#2E5C8A" stroke-width="1" opacity="0.55">
+    <line x1="140" y1="488.6" x2="1460" y2="488.6"/>
+    <line x1="140" y1="375.7" x2="1460" y2="375.7"/>
+    <line x1="140" y1="262.9" x2="1460" y2="262.9"/>
+    <line x1="140" y1="150"   x2="1460" y2="150"/>
+    <line x1="276.9"  y1="150" x2="276.9"  y2="545"/>
+    <line x1="731.6"  y1="150" x2="731.6"  y2="545"/>
+    <line x1="1186.2" y1="150" x2="1186.2" y2="545"/>
+    <line x1="1403.2" y1="150" x2="1403.2" y2="545"/>
+  </g>
+
+  <!-- axes -->
+  <g stroke="#9CC3E0" stroke-width="1.5">
+    <line x1="140" y1="150" x2="140" y2="545"/>
+    <line x1="140" y1="545" x2="1460" y2="545"/>
+  </g>
+
+  <!-- drafting dimension ticks, x -->
+  <g stroke="#f5f9fb" stroke-width="2">
+    <line x1="270.9"  y1="551" x2="282.9"  y2="539"/>
+    <line x1="725.6"  y1="551" x2="737.6"  y2="539"/>
+    <line x1="1180.2" y1="551" x2="1192.2" y2="539"/>
+    <line x1="1397.2" y1="551" x2="1409.2" y2="539"/>
+  </g>
+  <g font-size="14" fill="#9CC3E0" text-anchor="middle">
+    <text x="276.9" y="572">$0.10</text>
+    <text x="731.6" y="572">$1</text>
+    <text x="1186.2" y="572">$10</text>
+    <text x="1403.2" y="572">$30</text>
+  </g>
+  <text x="800" y="596" font-size="14" fill="#9CC3E0" text-anchor="middle">TOTAL CAMPAIGN COST &#8212; USD (LOG SCALE)</text>
+
+  <!-- drafting dimension ticks, y -->
+  <g stroke="#f5f9fb" stroke-width="2">
+    <line x1="134" y1="494.6" x2="146" y2="482.6"/>
+    <line x1="134" y1="381.7" x2="146" y2="369.7"/>
+    <line x1="134" y1="268.9" x2="146" y2="256.9"/>
+    <line x1="134" y1="156"   x2="146" y2="144"/>
+  </g>
+  <g font-size="14" fill="#9CC3E0" text-anchor="end">
+    <text x="126" y="493">7.0</text>
+    <text x="126" y="380">8.0</text>
+    <text x="126" y="267">9.0</text>
+    <text x="126" y="154">10.0</text>
+  </g>
+  <text transform="rotate(-90 84 347)" x="84" y="347" font-size="13" fill="#9CC3E0" text-anchor="middle">QUALITY SCORE &#8212; /10</text>
+
+  <!-- points, plotted cheap to dear -->
+  <!-- mark = surveyor's station: circle + cross ticks -->
+  <g class="anim" style="animation-delay:.05s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="176" cy="466" r="6.5"/>
+      <path d="M164 466h8M180 466h8M176 454v8M176 470v8"/>
+    </g>
+    <text x="194" y="462" font-size="15" fill="#f5f9fb">MISTRAL-SMALL</text>
+    <text x="194" y="482" font-size="13" fill="#9CC3E0">$0.06</text>
+  </g>
+  <g class="anim" style="animation-delay:.17s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="328.7" cy="319.3" r="6.5"/>
+      <path d="M316.7 319.3h8M332.7 319.3h8M328.7 307.3v8M328.7 323.3v8"/>
+    </g>
+    <text x="347" y="315" font-size="15" fill="#f5f9fb">GEMINI-2.0-FLASH</text>
+    <text x="347" y="335" font-size="13" fill="#9CC3E0">$0.13</text>
+  </g>
+  <g class="anim" style="animation-delay:.29s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="473" cy="432.1" r="6.5"/>
+      <path d="M461 432.1h8M477 432.1h8M473 420.1v8M473 436.1v8"/>
+    </g>
+    <text x="491" y="428" font-size="15" fill="#f5f9fb">GPT-4O-MINI</text>
+    <text x="491" y="448" font-size="13" fill="#9CC3E0">$0.27</text>
+  </g>
+  <g class="anim" style="animation-delay:.41s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="540.5" cy="375.7" r="6.5"/>
+      <path d="M528.5 375.7h8M544.5 375.7h8M540.5 363.7v8M540.5 379.7v8"/>
+    </g>
+    <text x="558" y="371" font-size="15" fill="#f5f9fb">MISTRAL-MEDIUM</text>
+    <text x="558" y="391" font-size="13" fill="#9CC3E0">$0.38</text>
+  </g>
+  <g class="anim" style="animation-delay:.53s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="838.7" cy="488.6" r="6.5"/>
+      <path d="M826.7 488.6h8M842.7 488.6h8M838.7 476.6v8M838.7 492.6v8"/>
+    </g>
+    <text x="857" y="484" font-size="15" fill="#f5f9fb">CLAUDE-HAIKU-4-5</text>
+    <text x="857" y="504" font-size="13" fill="#9CC3E0">$1.72</text>
+  </g>
+  <g class="anim" style="animation-delay:.65s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="889" cy="262.9" r="6.5"/>
+      <path d="M877 262.9h8M893 262.9h8M889 250.9v8M889 266.9v8"/>
+    </g>
+    <text x="871" y="254" font-size="15" fill="#f5f9fb" text-anchor="end">GEMINI-1.5-PRO</text>
+    <text x="871" y="276" font-size="13" fill="#9CC3E0" text-anchor="end">$2.22</text>
+  </g>
+  <g class="anim" style="animation-delay:.77s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="934.9" cy="285.4" r="6.5"/>
+      <path d="M922.9 285.4h8M938.9 285.4h8M934.9 273.4v8M934.9 289.4v8"/>
+    </g>
+    <text x="953" y="304" font-size="15" fill="#f5f9fb">MISTRAL-LARGE</text>
+    <text x="953" y="324" font-size="13" fill="#9CC3E0">$2.80</text>
+  </g>
+  <g class="anim" style="animation-delay:.89s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="1025.9" cy="229" r="6.5"/>
+      <path d="M1013.9 229h8M1029.9 229h8M1025.9 217v8M1025.9 233v8"/>
+    </g>
+    <text x="1025.9" y="192" font-size="15" fill="#f5f9fb" text-anchor="middle">GPT-4O</text>
+    <text x="1025.9" y="211" font-size="13" fill="#9CC3E0" text-anchor="middle">$4.44</text>
+  </g>
+  <g class="anim" style="animation-delay:1.01s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="1099.7" cy="319.3" r="6.5"/>
+      <path d="M1087.7 319.3h8M1103.7 319.3h8M1099.7 307.3v8M1099.7 323.3v8"/>
+    </g>
+    <line x1="1110" y1="326" x2="1140" y2="350" stroke="#9CC3E0" stroke-width="1"/>
+    <text x="1148" y="355" font-size="15" fill="#f5f9fb">CLAUDE-SONNET-4</text>
+    <text x="1148" y="375" font-size="13" fill="#9CC3E0">$6.45</text>
+  </g>
+  <g class="anim" style="animation-delay:1.13s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="1099.7" cy="240.3" r="6.5"/>
+      <path d="M1087.7 240.3h8M1103.7 240.3h8M1099.7 228.3v8M1099.7 244.3v8"/>
+    </g>
+    <line x1="1110" y1="247" x2="1140" y2="271" stroke="#9CC3E0" stroke-width="1"/>
+    <text x="1148" y="276" font-size="15" fill="#f5f9fb">CLAUDE-SONNET-5</text>
+    <text x="1148" y="296" font-size="13" fill="#9CC3E0">$6.45</text>
+  </g>
+  <g class="anim" style="animation-delay:1.25s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="1252.4" cy="206.4" r="6.5"/>
+      <path d="M1240.4 206.4h8M1256.4 206.4h8M1252.4 194.4v8M1252.4 210.4v8"/>
+    </g>
+    <text x="1272" y="202" font-size="15" fill="#f5f9fb">GPT-4-TURBO</text>
+    <text x="1272" y="222" font-size="13" fill="#9CC3E0">$13.98</text>
+  </g>
+  <g class="anim" style="animation-delay:1.37s">
+    <g stroke="#f5f9fb" stroke-width="1.5" fill="none">
+      <circle cx="1417.5" cy="150" r="6.5"/>
+      <path d="M1405.5 150h8M1421.5 150h8M1417.5 138v8M1417.5 154v8"/>
+    </g>
+    <text x="1397" y="146" font-size="15" fill="#f5f9fb" text-anchor="end">CLAUDE-OPUS-4-1</text>
+    <text x="1397" y="166" font-size="13" fill="#9CC3E0" text-anchor="end">$32.25</text>
+  </g>
+
+  <!-- title block -->
+  <line x1="24" y1="608" x2="1576" y2="608" stroke="#9CC3E0" stroke-width="1"/>
+  <line x1="1100" y1="608" x2="1100" y2="676" stroke="#9CC3E0" stroke-width="1"/>
+  <text x="48" y="638" font-size="13" fill="#9CC3E0">PRICES ARE THE ESTIMATOR'S BUILT-IN PER-1M-TOKEN CONSTANTS.</text>
+  <text x="48" y="658" font-size="13" fill="#9CC3E0">RERUN `node utils/cost-estimator.js estimate` FOR YOUR OWN CAMPAIGN SIZE.</text>
+  <text x="1124" y="634" font-size="16" fill="#f5f9fb">SHEET 00a &#8212; TAKEOFF</text>
+  <text x="1124" y="652" font-size="12" fill="#9CC3E0">DERIVED FROM utils/cost-estimator.js</text>
+  <text x="1124" y="668" font-size="12" fill="#9CC3E0">5 LEADS / 5 PLANS / 5 SITES</text>
+</svg>

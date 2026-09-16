@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" role="img" aria-label="Three carbon triplicate gate slips. Gate A after the casing: right geography, real businesses, public contacts only — stamped GO. Gate B after the first drawing: unique direction, local tone, executable plan. Gate C after the first build: mobile polish, correct locale, email sounds human. Each slip has a checked-by signature line and a GO / NO-GO stamp box.">
+  <title>HUMAN GATES — carbon triplicate slips A, B, C with GO / NO-GO stamps</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .gate { font-size: 30px; font-weight: 700; fill: #272625; letter-spacing: 1px; }
+    .sub  { font-size: 15px; letter-spacing: 2px; fill: #2E5C8A; }
+    .chk  { font-size: 17px; fill: #272625; }
+    .fld  { font-size: 14px; letter-spacing: 1.5px; fill: #2E5C8A; }
+    .anim { transform-box: fill-box; transform-origin: center;
+            animation: land .5s cubic-bezier(.18,1.3,.4,1) .6s both; }
+    @keyframes land { from { transform: scale(1.5); } to { transform: scale(1); } }
+    @media (prefers-reduced-motion: reduce){ .anim{ animation: none !important } }
+  </style>
+
+  <rect width="1600" height="300" fill="#272625"/>
+
+  <!-- ================= SLIP A ================= -->
+  <g transform="rotate(-1.2 275 150)">
+    <g transform="translate(40 24)">
+      <rect x="12" y="12" width="470" height="252" fill="#EBDFB4"/>
+      <rect x="6"  y="6"  width="470" height="252" fill="#E9CFC9"/>
+      <rect x="0"  y="0"  width="470" height="252" fill="#f5f9fb"/>
+      <path d="M12 10H458" stroke="#272625" stroke-width="1" stroke-dasharray="4 5" opacity="0.35"/>
+      <text class="gate" x="24" y="54">GATE A</text>
+      <text class="fld" x="446" y="34" text-anchor="end">FORM G-A</text>
+      <text class="sub" x="24" y="80">AFTER THE CASING</text>
+      <path d="M24 94H446" stroke="#272625" stroke-width="1" opacity="0.8"/>
+      <g fill="none" stroke="#272625" stroke-width="1.5">
+        <rect x="24" y="111" width="15" height="15"/>
+        <rect x="24" y="139" width="15" height="15"/>
+        <rect x="24" y="167" width="15" height="15"/>
+      </g>
+      <!-- human's red check marks -->
+      <g fill="none" stroke="#B3402F" stroke-width="2.5" stroke-linecap="round">
+        <path d="M26 118l5 6 9-11"/>
+        <path d="M26 146l5 6 9-11"/>
+        <path d="M26 174l5 6 9-11"/>
+      </g>
+      <text class="chk" x="52" y="124">RIGHT GEOGRAPHY</text>
+      <text class="chk" x="52" y="152">REAL BUSINESSES</text>
+      <text class="chk" x="52" y="180">PUBLIC CONTACTS ONLY</text>
+      <text class="fld" x="24" y="227">CHECKED BY:</text>
+      <path d="M150 222H320" stroke="#272625" stroke-width="1"/>
+      <path d="M162 219q18-14 38-3t46-7 52 3" fill="none" stroke="#B3402F" stroke-width="2"/>
+      <g transform="rotate(-6 393 212)">
+        <rect x="334" y="190" width="118" height="44" fill="none" stroke="#B3402F" stroke-width="2"/>
+        <text x="393" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#B3402F">GO / NO-GO</text>
+      </g>
+      <!-- landed GO stamp (one-shot land, static end state) -->
+      <g class="anim">
+        <g transform="translate(360 108) rotate(-12)">
+          <rect x="-56" y="-32" width="112" height="64" fill="none" stroke="#B3402F" stroke-width="4"/>
+          <rect x="-49" y="-25" width="98" height="50" fill="none" stroke="#B3402F" stroke-width="1.5"/>
+          <text x="0" y="12" text-anchor="middle" font-size="34" font-weight="700" letter-spacing="6" fill="#B3402F">GO</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= SLIP B ================= -->
+  <g transform="rotate(0.9 800 150)">
+    <g transform="translate(565 24)">
+      <rect x="12" y="12" width="470" height="252" fill="#EBDFB4"/>
+      <rect x="6"  y="6"  width="470" height="252" fill="#E9CFC9"/>
+      <rect x="0"  y="0"  width="470" height="252" fill="#f5f9fb"/>
+      <path d="M12 10H458" stroke="#272625" stroke-width="1" stroke-dasharray="4 5" opacity="0.35"/>
+      <text class="gate" x="24" y="54">GATE B</text>
+      <text class="fld" x="446" y="34" text-anchor="end">FORM G-B</text>
+      <text class="sub" x="24" y="80">AFTER THE FIRST DRAWING</text>
+      <path d="M24 94H446" stroke="#272625" stroke-width="1" opacity="0.8"/>
+      <g fill="none" stroke="#272625" stroke-width="1.5">
+        <rect x="24" y="111" width="15" height="15"/>
+        <rect x="24" y="139" width="15" height="15"/>
+        <rect x="24" y="167" width="15" height="15"/>
+      </g>
+      <text class="chk" x="52" y="124">UNIQUE DIRECTION</text>
+      <text class="chk" x="52" y="152">LOCAL TONE</text>
+      <text class="chk" x="52" y="180">EXECUTABLE PLAN</text>
+      <text class="fld" x="24" y="227">CHECKED BY:</text>
+      <path d="M150 222H320" stroke="#272625" stroke-width="1"/>
+      <g transform="rotate(-6 393 212)">
+        <rect x="334" y="190" width="118" height="44" fill="none" stroke="#B3402F" stroke-width="2"/>
+        <text x="393" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#B3402F">GO / NO-GO</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= SLIP C ================= -->
+  <g transform="rotate(-0.7 1325 150)">
+    <g transform="translate(1090 24)">
+      <rect x="12" y="12" width="470" height="252" fill="#EBDFB4"/>
+      <rect x="6"  y="6"  width="470" height="252" fill="#E9CFC9"/>
+      <rect x="0"  y="0"  width="470" height="252" fill="#f5f9fb"/>
+      <path d="M12 10H458" stroke="#272625" stroke-width="1" stroke-dasharray="4 5" opacity="0.35"/>
+      <text class="gate" x="24" y="54">GATE C</text>
+      <text class="fld" x="446" y="34" text-anchor="end">FORM G-C</text>
+      <text class="sub" x="24" y="80">AFTER THE FIRST BUILD</text>
+      <path d="M24 94H446" stroke="#272625" stroke-width="1" opacity="0.8"/>
+      <g fill="none" stroke="#272625" stroke-width="1.5">
+        <rect x="24" y="111" width="15" height="15"/>
+        <rect x="24" y="139" width="15" height="15"/>
+        <rect x="24" y="167" width="15" height="15"/>
+      </g>
+      <text class="chk" x="52" y="124">MOBILE POLISH</text>
+      <text class="chk" x="52" y="152">CORRECT LOCALE</text>
+      <text class="chk" x="52" y="180">EMAIL SOUNDS HUMAN</text>
+      <text class="fld" x="24" y="227">CHECKED BY:</text>
+      <path d="M150 222H320" stroke="#272625" stroke-width="1"/>
+      <g transform="rotate(-6 393 212)">
+        <rect x="334" y="190" width="118" height="44" fill="none" stroke="#B3402F" stroke-width="2"/>
+        <text x="393" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#B3402F">GO / NO-GO</text>
+      </g>
+    </g>
+  </g>
+</svg>

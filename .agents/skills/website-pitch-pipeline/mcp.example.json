@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "shadcn": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "shadcn@latest", "mcp"],
+      "env": {}
+    },
+    "magic": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "${MAGIC_API_KEY}"
+      }
+    },
+    "pollinations": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@pollinations/mcp"],
+      "env": {},
+      "_comment": "FREE image/text/audio/video via pollinations.ai — no API key required for basic use. Preferred free image generator."
+    },
+    "pollinations-images": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@pollinations/model-context-protocol"],
+      "env": {},
+      "_comment": "Alternate Pollinations MCP package (also free). Keep one of pollinations / pollinations-images if both conflict."
+    },
+    "unsplash": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "unsplash-mcp-server"],
+      "env": {
+        "UNSPLASH_ACCESS_KEY": "${UNSPLASH_ACCESS_KEY}"
+      },
+      "_comment": "FREE stock search. Get key: https://unsplash.com/developers — verify package name in hellokaton/unsplash-mcp-server README."
+    },
+    "pexels": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "pexels-mcp-server"],
+      "env": {
+        "PEXELS_API_KEY": "${PEXELS_API_KEY}"
+      },
+      "_comment": "FREE stock photos/videos. Get key: https://www.pexels.com/api/ — verify package name in garylab/pexels-mcp-server README."
+    },
+    "n8n": {
+      "type": "http",
+      "url": "${N8N_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${N8N_MCP_TOKEN}"
+      },
+      "_comment": "Optional. Omit entirely if you are not using n8n automation."
+    }
+  }
+}

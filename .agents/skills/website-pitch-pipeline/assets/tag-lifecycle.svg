@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 260" role="img" aria-label="Repo tag lifecycle as manila evidence tags on a dashed route: pending-beta, in-progress, ready-for-review (human), ready-for-outreach. Every repo also carries web-lead, geo slug, and batch-1 tags.">
+  <title>TAG LIFECYCLE — pending-beta → in-progress → ready-for-review (HUMAN) → ready-for-outreach; constant tags: web-lead, geo:&lt;GEO_SLUG&gt;, batch-1</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .tagtxt { font-size: 21px; font-weight: 700; fill: #272625; }
+    .cap { font-size: 14px; letter-spacing: 2.5px; fill: #9CC3E0; }
+  </style>
+
+  <rect width="1600" height="260" fill="#272625"/>
+
+  <!-- dashed cyanotype route line -->
+  <path d="M30 56H1570" stroke="#9CC3E0" stroke-width="2" stroke-dasharray="10 8" fill="none"/>
+  <!-- direction chevrons between tags -->
+  <g stroke="#9CC3E0" stroke-width="2.5" fill="none">
+    <path d="M394 46l12 10-12 10M794 46l12 10-12 10M1194 46l12 10-12 10"/>
+  </g>
+
+  <!-- ======== TAG 1: pending-beta ======== -->
+  <g transform="rotate(-3 200 139)">
+    <path d="M65 139L99 100H345v78H99Z" fill="#E3D9BE"/>
+    <circle cx="93" cy="139" r="8" fill="#272625" stroke="#f5f9fb" stroke-width="2"/>
+    <text class="tagtxt" x="115" y="147">pending-beta</text>
+  </g>
+  <path d="M96 132C88 108 118 78 140 57" stroke="#f5f9fb" stroke-width="1.5" fill="none" opacity="0.85"/>
+  <circle cx="140" cy="57" r="3" fill="#f5f9fb"/>
+
+  <!-- ======== TAG 2: in-progress ======== -->
+  <g transform="rotate(2 600 139)">
+    <path d="M465 139L499 100H745v78H499Z" fill="#E3D9BE"/>
+    <circle cx="493" cy="139" r="8" fill="#272625" stroke="#f5f9fb" stroke-width="2"/>
+    <text class="tagtxt" x="515" y="147">in-progress</text>
+  </g>
+  <path d="M497 130C492 106 518 78 540 57" stroke="#f5f9fb" stroke-width="1.5" fill="none" opacity="0.85"/>
+  <circle cx="540" cy="57" r="3" fill="#f5f9fb"/>
+
+  <!-- ======== TAG 3: ready-for-review + HUMAN stamp ======== -->
+  <g transform="rotate(-2.5 1000 139)">
+    <path d="M855 139L889 100H1145v78H889Z" fill="#E3D9BE"/>
+    <circle cx="883" cy="139" r="8" fill="#272625" stroke="#f5f9fb" stroke-width="2"/>
+    <text class="tagtxt" x="905" y="147">ready-for-review</text>
+    <!-- red HUMAN stamp: large bold red on manila (3:1 large-text rule) -->
+    <g transform="rotate(-8 1085 114)">
+      <rect x="1030" y="98" width="110" height="32" fill="none" stroke="#B3402F" stroke-width="2.5"/>
+      <text x="1085" y="121" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="2" fill="#B3402F">HUMAN</text>
+    </g>
+  </g>
+  <path d="M887 130C882 106 908 78 930 57" stroke="#f5f9fb" stroke-width="1.5" fill="none" opacity="0.85"/>
+  <circle cx="930" cy="57" r="3" fill="#f5f9fb"/>
+
+  <!-- ======== TAG 4: ready-for-outreach ======== -->
+  <g transform="rotate(3 1400 139)">
+    <path d="M1245 139L1279 100H1555v78H1279Z" fill="#E3D9BE"/>
+    <circle cx="1273" cy="139" r="8" fill="#272625" stroke="#f5f9fb" stroke-width="2"/>
+    <text class="tagtxt" x="1295" y="147">ready-for-outreach</text>
+  </g>
+  <path d="M1277 130C1272 106 1298 78 1320 57" stroke="#f5f9fb" stroke-width="1.5" fill="none" opacity="0.85"/>
+  <circle cx="1320" cy="57" r="3" fill="#f5f9fb"/>
+
+  <!-- ======== constant companion tags ======== -->
+  <text class="cap" x="30" y="230">ON EVERY BUSINESS REPO</text>
+
+  <g>
+    <rect x="360" y="204" width="132" height="36" fill="#E3D9BE"/>
+    <circle cx="376" cy="222" r="5" fill="#272625" stroke="#f5f9fb" stroke-width="1.5"/>
+    <text x="390" y="229" font-size="18" font-weight="700" fill="#272625">web-lead</text>
+  </g>
+  <g>
+    <rect x="516" y="204" width="200" height="36" fill="#E3D9BE"/>
+    <circle cx="532" cy="222" r="5" fill="#272625" stroke="#f5f9fb" stroke-width="1.5"/>
+    <text x="546" y="229" font-size="18" font-weight="700" fill="#272625">geo:&lt;GEO_SLUG&gt;</text>
+  </g>
+  <g>
+    <rect x="740" y="204" width="122" height="36" fill="#E3D9BE"/>
+    <circle cx="756" cy="222" r="5" fill="#272625" stroke="#f5f9fb" stroke-width="1.5"/>
+    <text x="770" y="229" font-size="18" font-weight="700" fill="#272625">batch-1</text>
+  </g>
+</svg>
