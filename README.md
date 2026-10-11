@@ -15,7 +15,9 @@ Agents case a market, draw one bespoke demo site per business, build it, and dra
 
 ## Revision notice
 
-The process on these sheets is revision 1. Sheet 01 was validated once on a Texas bars lead batch (sanitized, in [`leads/test-1`](./leads/test-1)); sheets 02–04 have not been run on a real campaign yet. The Gemini-native branch was added after. The process is now being redrawn; sheets 01–04 will change, and the gates, the tag lifecycle and the report rule may change with them. Until the revised set is issued, treat this repo as a drawing set under review: read it, run it at your own risk, and expect the next revision to break compatibility with runs filed under this one.
+The process on these sheets is revision 1. Sheet 01 was validated once on a Texas bars lead batch (sanitized, in [`leads/test-1`](./leads/test-1)); sheets 02–04 have not run on a real campaign yet. The Gemini-native branch was added after.
+
+**Why it is being redrawn.** In testing, the pipeline does not yet produce demo sites that are presentable after mild revision. It finds the businesses, but the sites it draws for them are not good enough to put in front of an owner, and even the per-business templates fall short. The rework is a test programme to find which MCP servers and external AI APIs the drawing and build sheets need, and how to combine them so a demo comes out needing only light edits before it ships. Until that revised set is issued, treat this repo as a drawing set under review: read it, run it at your own risk, and expect the next revision to break compatibility with runs filed under this one.
 
 ---
 
