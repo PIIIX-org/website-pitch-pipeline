@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 150" role="img" aria-label="Red drafting stamp: REVISION 2 IN PROGRESS. Sheets 01 to 04 are the revision 1 process and will change. Not for production use until the revised set is issued.">
+  <title>REVISION 2 IN PROGRESS — not for production use until the revised set is issued</title>
+  <style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}</style>
+  <rect width="1600" height="150" fill="#272625"/>
+  <g transform="rotate(-2 800 75)">
+    <rect x="260" y="22" width="1080" height="106" fill="none" stroke="#B3402F" stroke-width="5"/>
+    <rect x="270" y="32" width="1060" height="86" fill="none" stroke="#B3402F" stroke-width="1.5" opacity=".7"/>
+    <path d="M345 60 l22 -36 l22 36 z" fill="none" stroke="#B3402F" stroke-width="3"/>
+    <text x="367" y="55" text-anchor="middle" font-size="20" font-weight="700" fill="#B3402F">2</text>
+    <text x="800" y="68" text-anchor="middle" font-size="34" font-weight="700" letter-spacing="6" fill="#B3402F">REVISION 2 IN PROGRESS</text>
+    <text x="800" y="102" text-anchor="middle" font-size="13" letter-spacing="1.5" fill="#B3402F">SHEETS 01–04 ARE THE REV 1 PROCESS AND WILL CHANGE · NOT FOR PRODUCTION UNTIL REISSUED</text>
+  </g>
+</svg>
