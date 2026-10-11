@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 90" role="img" aria-label="Title-block meta strip: license MIT, runtime any agent, geography variable, batch cap 5, gates A B C checked by human, revision blank">
-  <title>META STRIP — title-block cells: LICENSE MIT · RUNTIME ANY AGENT · GEOGRAPHY VARIABLE · BATCH CAP 5 · GATES A·B·C HUMAN · REV blank</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 90" role="img" aria-label="Title-block meta strip: license MIT, runtime any agent, geography variable, batch cap 5, gates A B C checked by human, revision 1, revision 2 in progress">
+  <title>META STRIP — title-block cells: LICENSE MIT · RUNTIME ANY AGENT · GEOGRAPHY VARIABLE · BATCH CAP 5 · GATES A·B·C HUMAN · REV 1 → 2 IN PROGRESS</title>
   <style>
     text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .lbl { font-size: 13px; letter-spacing: 2.5px; fill: #9CC3E0; }
@@ -46,5 +46,7 @@
 
   <!-- cell 6: REV (blank field) -->
   <text class="lbl" x="1332" y="33">REV</text>
-  <path d="M1332 64h130" stroke="#9CC3E0" stroke-width="1.5"/>
+  <text class="val" x="1332" y="66">1 &#8594;</text>
+  <rect x="1420" y="40" width="150" height="32" fill="#B3402F"/>
+  <text x="1495" y="63" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="2" fill="#f5f9fb">2 IN PROG.</text>
 </svg>

@@ -3,13 +3,19 @@
 
 <img src="./assets/hero-banner.svg" width="100%" alt="Overhead view of a planning table. A cyanotype blueprint titled WEBSITE-PITCH-PIPELINE shows a storefront homepage drawn as an elevation, flagged NO CTA, MENU IS A JPG and MOBILE BROKEN. Beside the sheet: a city map pinned istanbul, berlin and nyc, a torn takeoff slip reading $0.06 to $32.25 same job, a GATE A carbon slip, and a red stamp reading CHECKED: HUMAN. The title block reads FIRM: PIIIX.org, DRAWN BY: AGENTS, CHECKED BY: HUMAN, SHEET 1 OF 7." />
 
-<img src="./assets/tag-metabar.svg" width="100%" alt="Drafting title-block strip with six cells: LICENSE MIT, RUNTIME ANY AGENT, GEOGRAPHY VARIABLE, BATCH CAP 5, GATES A·B·C checked by HUMAN, REV blank." />
+<img src="./assets/tag-metabar.svg" width="100%" alt="Drafting title-block strip with six cells: LICENSE MIT, RUNTIME ANY AGENT, GEOGRAPHY VARIABLE, BATCH CAP 5, GATES A·B·C checked by HUMAN, REV 1 to 2 in progress." />
+
+<img src="./assets/revision-stamp.svg" width="100%" alt="Red drafting stamp: REVISION 2 IN PROGRESS. Sheets 01 to 04 are the revision 1 process and will change. Not for production use until the revised set is issued." />
 
 </div>
 
 Agents case a market, draw one bespoke demo site per business, build it, and draft the outreach. A human signs every gate before anything scales. The demo exists to start a conversation with the owner of a weak website, in any city you point the pipeline at.
 
 > **AGENTS HOLD NO KEYS. THE HUMAN SIGNS EVERY GATE.**
+
+## Revision notice
+
+The process on these sheets is revision 1. It ran once end to end (`runs/`, a Texas bars batch, sanitized) and the Gemini-native branch was added after. The process is now being redrawn; sheets 01–04 will change, and the gates, the tag lifecycle and the report rule may change with them. Until the revised set is issued, treat this repo as a drawing set under review: read it, run it at your own risk, and expect the next revision to break compatibility with runs filed under this one.
 
 ---
 
